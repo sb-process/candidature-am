@@ -723,7 +723,8 @@ blockquote {
 .ishikawa-box {
   margin-top: 2rem;
   padding: 1.5rem;
-  background: var(--gray-bg);
+  background: var(--white);
+  border: 1px solid var(--gray-border);
   border-radius: var(--radius);
   border-left: 4px solid var(--accent);
 }
