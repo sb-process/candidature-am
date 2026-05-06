@@ -722,11 +722,11 @@ blockquote {
 
 .ishikawa-box {
   margin-top: 2rem;
-  padding: 1.5rem;
+  padding: 1.75rem;
   background: var(--white);
   border: 1px solid var(--gray-border);
+  border-top: 3px solid var(--blue);
   border-radius: var(--radius);
-  border-left: 4px solid var(--accent);
 }
 
 .ishikawa-box h3 {
