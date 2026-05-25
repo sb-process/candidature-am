@@ -9,6 +9,7 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="header-inner">
       <div class="header-left">
@@ -18,18 +19,20 @@
         <p class="header-location">ArcelorMittal France — Site de Dunkerque</p>
       </div>
       <div class="header-right">
-        <a href="cv_serge_buasa.pdf" class="btn-download" download>Télécharger le CV</a>
+        <a href="cv_serge_buasa.pdf" class="btn-download" download>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+          Télécharger le CV
+        </a>
       </div>
     </div>
   </header>
 
+  <!-- NAVIGATION -->
   <nav>
     <ul>
       <li><a href="#profil">Profil</a></li>
-      <li><a href="#resume">Résumé exécutif</a></li>
       <li><a href="#cas-etude">Cas d'étude</a></li>
       <li><a href="#vision">Vision du poste</a></li>
-      <li><a href="#pilotage">Pilotage</a></li>
       <li><a href="#carnet">Carnet de nuances</a></li>
       <li><a href="#nouvelles-nuances">Nouvelles nuances</a></li>
       <li><a href="#competences">Compétences</a></li>
@@ -39,13 +42,15 @@
 
   <main>
 
+    <!-- PROFIL -->
     <section id="profil">
       <div class="section-inner">
         <h2>Profil</h2>
-        <p class="lead">Alternance achevée en mars 2026 sur le site ArcelorMittal Dunkerque, au contact direct des données et problématiques de production aciérie.</p>
-        <p class="lead">Travail centré sur l’analyse qualité process, la structuration de bases filières et l’objectivation statistique de variables critiques sur cas réels.</p>
-        <p class="lead">Objectif sur ce poste : prolonger le socle A3 / AMF transmis par les experts process par une couche analytique ciblée, au service de la chimie acier, de la maîtrise inclusionnaire et de la maîtrise thermique.</p>
+        <p class="lead">
+          Alternance terminée mars 2026 sur le site de Dunkerque — formation BAC+5 orientée méthodologie de projet (A3/AMF, DMAIC/Six Sigma) et outils analytiques (KNIME, Orange 3, Python). Travail direct sur les données de production de l'aciérie. Je m'appuie sur le socle méthodologique A3/AMF transmis par les experts process pour y ajouter une couche analytique là où elle crée de la valeur : couverture exhaustive des variables anti-lampadaire (visualisations et tests statistiques sur l'ensemble des candidats, pas seulement les suspects habituels), conformité Six Sigma — et modèles supervisés en complément pour les questions plus complexes : interactions entre variables, effets combinés, classification sur signal bruité — là où l'expérience accumulée ne suffit pas à trancher seule.
+        </p>
 
+        <!-- SCHÉMA IMBRICATION DATA-DRIVEN -->
         <div class="imbrication-wrapper">
           <h3 class="imbrication-title">Démarche data-driven : renforcement par couches</h3>
           <p class="imbrication-subtitle">Appliquée aux 3 axes du poste — chimie acier · maîtrise inclusionnaire · maîtrise thermique</p>
@@ -60,8 +65,8 @@
               <div class="layer-header">
                 <span class="layer-tag layer-tag-2">+ Visualisations & tests statistiques automatisés</span>
               </div>
-              <p class="layer-desc">Couverture exhaustive des variables candidates — approche anti-biais lampadaire<br>
-              Pour chaque variable : visualisation dédiée + test statistique adapté<br>
+              <p class="layer-desc">Couverture exhaustive de toutes les variables — anti-biais lampadaire<br>
+              Pour chaque variable : visualisation dédiée + test statistique adapté — boxplots · scatter · QQ-plot · cartes de contrôle<br>
               <span class="layer-tools">Mann-Whitney · Spearman · Shapiro · Cpk — KNIME · Python</span></p>
 
               <div class="layer layer-ml">
@@ -79,22 +84,7 @@
       </div>
     </section>
 
-    <section id="resume" class="section-alt">
-      <div class="section-inner">
-        <h2>Résumé exécutif</h2>
-        <div class="result-box">
-          <h3>Ce que montre le dossier</h3>
-          <ul>
-            <li>Capacité à structurer un cas A3 réel sur une problématique qualité aciérie.</li>
-            <li>Mise en évidence du lien entre chimie acier liquide et défaut aval.</li>
-            <li>Construction d’une base filière bobine → brame → coulée exploitable pour RCA.</li>
-            <li>Usage de KNIME, Orange 3 et Python comme outils d’aide à la décision process.</li>
-            <li>Projection du poste en 4 axes : résiduels / inclusionnaire / RH / thermique.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
+    <!-- CAS D'ÉTUDE -->
     <section id="cas-etude" class="section-alt">
       <div class="section-inner">
         <h2>Cas d'étude — Défaut BLSR sur nuance IF TiNb</h2>
@@ -104,10 +94,10 @@
           <div class="pipeline-step">
             <div class="step-number">1</div>
             <div class="step-content">
-              <h3>A3 — Contexte & Protect</h3>
-              <p><strong>Réalisé</strong> — synthèse defecto et indicateurs clés sur nuance IF Ti/Nb : taux d'occurrence BLSR, impact économique filière, cadrage du périmètre.</p>
-              <p><strong>Réalisé</strong> — objectivation du besoin de containment via surlargeur et analyse économique filière.</p>
-              <p class="step-output">Sortie : containment actif · taux BLSR quantifié · premières pistes chimie issues du terrain et du kick-off.</p>
+              <h3>A3 — Contexte &amp; Protect</h3>
+              <p><strong>Synthèse defecto &amp; indicateurs clés</strong> — exploitation autonome des analyses du laboratoire sur nuance IF Ti/Nb : taux d'occurrence BLSR, impact économique filière, cadrage du périmètre. Indicateurs construits pour le kick-off projet — la restitution aux parties prenantes a déclenché la remontée de cas historiques marquants et orienté les premières pistes chimie (Cu, Mn/S).</p>
+              <p><strong>Protect</strong> — déclenché après quantification du risque : mise en place du surlargeur (containment) et objectivation économique filière pour sécuriser la production en attente de la root cause.</p>
+              <p class="step-output">Sortie : containment actif · taux BLSR quantifié · pistes chimie identifiées par les experts terrain — kick-off comme outil de mobilisation collective.</p>
             </div>
           </div>
 
@@ -117,8 +107,8 @@
             <div class="step-number">2</div>
             <div class="step-content">
               <h3>Agrégation filière — ingénierie des données</h3>
-              <p><strong>Réalisé</strong> — lien établi : <strong>Bobine → Brame → Coulée aciérie → Composition chimique + paramètres process</strong>.</p>
-              <p class="step-output">Sortie : base filière consolidée, exploitable pour la RCA.</p>
+              <p>Lien établi : <strong>Bobine → Brame → Coulée aciérie → Composition chimique + Paramètres process</strong>. Reconstruction de la chaîne causale depuis le défaut fin de filière jusqu'à l'aciérie de Dunkerque.</p>
+              <p class="step-output">Sortie : base filière consolidée — chaque bobine reliée à sa brame source et aux paramètres process aciérie.</p>
             </div>
           </div>
 
@@ -128,8 +118,8 @@
             <div class="step-number">3</div>
             <div class="step-content">
               <h3>Qualification du signal qualité — Orange 3</h3>
-              <p><strong>Réalisé</strong> — clustering non supervisé sur images de surface, validation des clusters avec l'expert qualité terrain, construction d'un signal Y fiabilisé.</p>
-              <p class="step-output">Sortie : signal binaire <strong>OK / NOK</strong> par brame — base prête pour la RCA.</p>
+              <p>Clustering non supervisé sur images de surface bobines, appliqué à la base agrégée. Validation des clusters avec l'expert qualité terrain (<em>human-in-the-loop</em>). Construction d'un modèle de classification supervisé → signal Y fiabilisé.</p>
+              <p class="step-output">Sortie : signal binaire <strong>OK / NOK (BLSR présent / absent)</strong> par brame — base prête pour la RCA.</p>
             </div>
           </div>
 
@@ -139,177 +129,186 @@
             <div class="step-number">4</div>
             <div class="step-content">
               <h3>Analyse exploratoire RCA — KNIME</h3>
-              <p><strong>Réalisé</strong> — tests statistiques adaptés au type de variable :</p>
+              <p>Tests statistiques adaptés au type de variable :</p>
               <ul>
                 <li>Cu (continu) vs BLSR (binaire) → <strong>Mann-Whitney</strong></li>
                 <li>Rapport Mn/S (continu) vs BLSR (binaire) → <strong>Mann-Whitney</strong></li>
                 <li>Taux ferrailles vs Cu → <strong>Spearman</strong></li>
               </ul>
-              <p class="step-output">Signal identifié : <strong>[Cu] plus élevé dans la population BLSR</strong>. Rapport Mn/S défavorable associé à l'occurrence BLSR.</p>
+              <p class="step-output">Signal identifié : <strong>[Cu] significativement plus élevé dans la population BLSR</strong> vs non-BLSR. Rapport Mn/S défavorable corrélé à l'occurrence BLSR.</p>
             </div>
           </div>
         </div>
 
         <div class="result-box">
-          <h3>Pistes de root causes</h3>
+          <h3>Pistes de root causes — signaux statistiques significatifs</h3>
           <div class="mechanism-grid">
             <div class="mechanism-item">
-              <h4>Signal Cu — hypothèse d’embrittlement</h4>
-              <p><strong>Signal identifié</strong> — [Cu] plus élevé dans la population BLSR.</p>
-              <p><strong>Hypothèse à valider</strong> — enrichissement Cu en surface lors du réchauffage brame, cohérent avec la littérature sur la fragilisation de peau.</p>
+              <h4>Signal Cu — hypothèse embrittlement</h4>
+              <p>Signal Mann-Whitney significatif : [Cu] plus élevé dans la population BLSR. Hypothèse cohérente avec la littérature : ↑ ferrailles → ↑ Cu résiduel → enrichissement Cu à l'interface oxyde/métal lors du réchauffage brame → <em>liquid copper embrittlement</em> → fragilisation de la peau → BLSR au laminage. <span class="ref-note">(Savov et al., 2006 ; Melford, 1980)</span></p>
             </div>
             <div class="mechanism-item">
-              <h4>Signal Mn/S — hypothèse FeS</h4>
-              <p><strong>Signal identifié</strong> — rapport Mn/S significatif.</p>
-              <p><strong>Hypothèse à valider</strong> — Mn/S trop faible, favorisant FeS aux joints de grains puis fragilisation révélée au R2.</p>
+              <h4>Signal Mn/S — hypothèse FeS : cofacteur thermodynamique &amp; révélation mécanique au R2</h4>
+              <p>Signal Mann-Whitney significatif sur rapport Mn/S. Hypothèse : quand Mn/S trop faible, le soufre ne trouve pas assez de manganèse → se lie au fer → précipitation <strong>FeS aux joints de grains</strong> (seuil ~988°C) plutôt que MnS. Localisation physique identifiée par la defecto : le défaut apparaît <strong>au dégrossisseur R2</strong> (séquence : four de réchauffage → R1 réversible → R2 → R3/R4 → finisseur). La présence persistante de calamine confirme qu'on est en amont du laminage à chaud finisseur. La brame arrive au R2 déjà fragilisée par le four (Cu enrichi en surface, MnS/FeS aux joints de grains austénitiques) — le cisaillement mécanique en rive au R2 révèle le défaut, il ne le génère pas. La température de bord de brame au R2 peut se rapprocher de 988°C → plage de précipitation FeS → fragilisation intergranulaire amplifiée. La variable teta_surface_r2 a donc une adresse physique précise dans le process — à valider Phase 0. <span class="ref-note">(Turkdogan, 1996 — thermodynamique Ksp(T) ; Melford, 1980 — MnS cofacteur fragilisation Cu×MnS)</span></p>
             </div>
             <div class="mechanism-item mechanism-full">
-              <h4>Synergie Cu × FeS</h4>
-              <p><strong>Projection poste</strong> — vérifier si l’accumulation séquentielle des deux mécanismes fait franchir un seuil de non-qualité, et orienter les leviers aciérie associés.</p>
+              <h4>Synergie Cu × FeS — fragilisation séquentielle — lien structurel avec la décarbonation ?</h4>
+              <p>Les deux signaux sont indépendants et significatifs. La question ouverte : chaque mécanisme seul est peut-être tolérable — leur accumulation séquentielle franchit-elle le seuil → BLSR ? Si oui, les leviers sont exclusivement chimiques en aciérie (Cu, Mn/S) — aucun levier thermique efficace n'existe une fois la précipitation engagée.</p>
+              <p style="margin-top:0.6rem;">Question structurelle associée : ↑ taux ferrailles (objectif groupe décarbonation) → ↑ Cu résiduel tendanciel — documenté par l'IEA comme problème mondial. La contrainte est actée — les réponses doivent être trouvées <em>dans</em> cette contrainte. Ces hypothèses orientent le plan d'actions Phase 0 — validation terrain requise.</p>
             </div>
           </div>
         </div>
 
-        <details class="result-box">
-          <summary><strong>Voir le détail technique des hypothèses physiques et thermodynamiques</strong></summary>
-          <div style="margin-top:1rem;">
-            <p><strong>Hypothèse Cu</strong> — ↑ ferrailles → ↑ Cu résiduel → enrichissement Cu à l'interface oxyde / métal lors du réchauffage brame → fragilisation de surface.</p>
-            <p><strong>Hypothèse Mn/S</strong> — si Mn/S trop faible, le soufre ne trouve pas assez de manganèse et peut favoriser FeS aux joints de grains, avec une fenêtre thermique critique autour de 988°C.</p>
-            <p><strong>Adresse process</strong> — la variable teta_surface_r2 mérite validation en Phase 0 comme variable de surveillance du risque, sans en faire à ce stade un levier principal.</p>
-          </div>
-        </details>
+        <!-- ISHIKAWA 6M -->
+        <div class="ishikawa-box">
+          <h3>Ishikawa — Pistes de root causes BLSR (6M)</h3>
+          <p class="ishikawa-subtitle">Structure orientée par les signaux statistiques, la synthèse des analyses defectologiques, les pistes terrain du process aciérie, du process TCC et de la qualité filière — à valider Phase 0</p>
+          <div class="ishikawa-grid">
 
-        <details class="ishikawa-box">
-          <summary><strong>Voir l'Ishikawa — Pistes de root causes BLSR (6M)</strong></summary>
-          <div style="margin-top:1rem;">
-            <p class="ishikawa-subtitle">Structure orientée par les signaux statistiques, la synthèse des analyses defectologiques, les pistes terrain du process aciérie, du process TCC et de la qualité filière — à valider Phase 0</p>
-            <div class="ishikawa-grid">
-
-              <div class="ishi-card ishi-matiere">
-                <div class="ishi-header">Matière</div>
-                <ul>
-                  <li><strong>↑ Cu résiduel</strong> — ferrailles → enrichissement surface brame au four → LME · <em>Levier : cahier des charges Cu par nuance</em></li>
-                  <li><strong>Mn/S défavorable</strong> — S élevé relatif à Mn → FeS aux joints de grains ~988°C · <em>Levier : seuil Mn/S minimum par nuance</em></li>
-                  <li><strong>Éléments tramp As, Ni, Sn</strong> — cofacteurs fragilisation intergranulaire à quantifier · <em>Levier : seuil Cu_eq_DK = Cu + 2×As + Ni/3</em></li>
-                </ul>
-              </div>
-
-              <div class="ishi-card ishi-milieu">
-                <div class="ishi-header">Milieu</div>
-                <ul>
-                  <li><strong>Décarbonation structurelle</strong> — ↑ taux ferrailles → ↑ Cu résiduel non éliminable par BOF · <em>Levier : DRI H₂ long terme — actions court terme dans la contrainte</em></li>
-                  <li><strong>Variabilité fournisseurs ferrailles</strong> — hétérogénéité composition selon origine · <em>Levier : traçabilité et tri par qualité Cu</em></li>
-                </ul>
-              </div>
-
-              <div class="ishi-card ishi-methode">
-                <div class="ishi-header">Méthode</div>
-                <ul>
-                  <li><strong>Ordre nuances en séquence</strong> — IF Ti/Nb en début de séquence limite l'exposition au Cu accumulé · <em>Levier : règle de séquençage par segment</em></li>
-                  <li><strong>Rang séquence × Cu</strong> — accumulation Cu en fin de séquence longue → brames fin de séquence plus à risque · <em>Levier : longueur max séquence selon [Cu] mesuré · alerte MES en fin de séquence longue</em></li>
-                  <li><strong>Nettoyage poche</strong> — le nettoyage remet le compteur Cu à zéro · <em>Levier : variable nb_coulees_depuis_nettoyage → proxy accumulation Cu réel</em></li>
-                  <li><strong>Cahier des charges ferrailles</strong> — absence de spécification Cu par nuance · <em>Levier : seuils différenciés IF / AHSS / NGO</em></li>
-                </ul>
-              </div>
-
-              <div class="ishi-card ishi-machine">
-                <div class="ishi-header">Machine</div>
-                <ul>
-                  <li><strong>teta_surface_r2</strong> — T° bord brame au R2 &lt; 988°C → FeS précipité aux joints de grains → fragilisation révélée au cisaillement · <em>Usage : variable de surveillance du risque BLSR — les leviers réels sont chimiques (Mn/S, Cu)</em></li>
-                  <li><strong>Delta vitesse coulée</strong> — instabilité vitesse → hétérogénéité solidification · <em>Levier : consigne stabilité vitesse</em></li>
-                  <li><strong>File × chariot porte-répartiteur</strong> — hétérogénéité spatiale coulée · <em>Levier : cartographie risque BLSR par machine_id · alerte MES si machine_id à risque élevé</em></li>
-                  <li><strong>Usure cylindres R2 TCC</strong> — usure différentielle → pression asymétrique en rive · <em>Levier : analyse taux BLSR par montage cylindres R2</em></li>
-                </ul>
-              </div>
-
-              <div class="ishi-card ishi-mo">
-                <div class="ishi-header">Main d'œuvre</div>
-                <ul>
-                  <li><strong>Pilotage thermique four</strong> — dérive profil four → teta_surface_r2 dégradé · <em>Usage : alerte comme signal précurseur — déclenche vérification chimie aciérie</em></li>
-                  <li><strong>Détection dérive Cu</strong> — absence de suivi Cu coulée par coulée en production · <em>Levier : tableau de bord Cu séquence J0</em></li>
-                </ul>
-              </div>
-
-              <div class="ishi-card ishi-mesure">
-                <div class="ishi-header">Mesure</div>
-                <ul>
-                  <li><strong>Signal defecto BLSR</strong> — fiabilité et couverture bobines · <em>Levier : pipeline Orange 3 automatisé</em></li>
-                  <li><strong>Délai retour info aciérie</strong> — défaut détecté en galva (Montataire), cause en aciérie (Dunkerque) → latence J+30 · <em>Levier : jointure filière J+1</em></li>
-                  <li><strong>temp_poche manquante</strong> — variable thermique non jointurée au MES · <em>Levier : jointure no_coulée → MES aciérie</em></li>
-                  <li><strong>rang_sequence manquant</strong> — position coulée dans la séquence non stockée · <em>Levier : variable dérivée via date_deb_seq_real</em></li>
-                  <li><strong>nb_coulees_depuis_nettoyage manquant</strong> — historique nettoyage poche absent · <em>Levier : jointure planning maintenance MES</em></li>
-                  <li><strong>âge_repartiteur manquant</strong> — usure répartiteur par file×chariot non renseignée · <em>Levier : jointure planning maintenance CC</em></li>
-                </ul>
-              </div>
-
+            <div class="ishi-card ishi-matiere">
+              <div class="ishi-header">Matière</div>
+              <ul>
+                <li><strong>↑ Cu résiduel</strong> — ferrailles → enrichissement surface brame au four → LME · <em>Levier : cahier des charges Cu par nuance</em></li>
+                <li><strong>Mn/S défavorable</strong> — S élevé relatif à Mn → FeS aux joints de grains ~988°C · <em>Levier : seuil Mn/S minimum par nuance</em></li>
+                <li><strong>Éléments tramp As, Ni, Sn</strong> — cofacteurs fragilisation intergranulaire à quantifier · <em>Levier : seuil Cu_eq_DK = Cu + 2×As + Ni/3</em></li>
+              </ul>
             </div>
+
+            <div class="ishi-card ishi-milieu">
+              <div class="ishi-header">Milieu</div>
+              <ul>
+                <li><strong>Décarbonation structurelle</strong> — ↑ taux ferrailles → ↑ Cu résiduel non éliminable par BOF · <em>Levier : DRI H₂ long terme — actions court terme dans la contrainte</em></li>
+                <li><strong>Variabilité fournisseurs ferrailles</strong> — hétérogénéité composition selon origine · <em>Levier : traçabilité et tri par qualité Cu</em></li>
+              </ul>
+            </div>
+
+            <div class="ishi-card ishi-methode">
+              <div class="ishi-header">Méthode</div>
+              <ul>
+                <li><strong>Ordre nuances en séquence</strong> — IF Ti/Nb en début de séquence limite l'exposition au Cu accumulé · <em>Levier : règle de séquençage par segment</em></li>
+                <li><strong>Rang séquence × Cu</strong> — accumulation Cu en fin de séquence longue → brames fin de séquence plus à risque · variable absente de la BDD actuelle → à construire via date_deb_seq_real · <em>Levier : longueur max séquence selon [Cu] mesuré · alerte MES en fin de séquence longue</em></li>
+                <li><strong>Nettoyage poche</strong> — le nettoyage remet le compteur Cu à zéro · variable absente BDD → à jointure avec planning maintenance MES (manager process aciérie) · <em>Levier : variable nb_coulees_depuis_nettoyage → proxy accumulation Cu réel · règle séquençage intégrant historique nettoyage</em></li>
+                <li><strong>Cahier des charges ferrailles</strong> — absence de spécification Cu par nuance · <em>Levier : seuils différenciés IF / AHSS / NGO</em></li>
+              </ul>
+            </div>
+
+            <div class="ishi-card ishi-machine">
+              <div class="ishi-header">Machine</div>
+              <ul>
+                <li><strong>teta_surface_r2</strong> — indicateur de risque thermique : T° bord brame au R2 < 988°C → FeS déjà précipité aux joints de grains → fragilisation révélée au cisaillement · une fois précipité, FeS fragilise quelle que soit la température ultérieure — pas de levier thermique efficace · <em>Usage : variable de surveillance et de prédiction du risque BLSR — pas un levier d'action · les leviers réels sont chimiques en aciérie (Mn/S, Cu)</em></li>
+                <li><strong>Delta vitesse coulée</strong> — instabilité vitesse_maxi − vitesse_mini → hétérogénéité solidification → zones fragilisées variables · <em>Levier : consigne stabilité vitesse</em></li>
+                <li><strong>File × chariot porte-répartiteur</strong> — hétérogénéité spatiale coulée : répartiteur usé ou mal centré → flux acier asymétrique → zones brame localement enrichies en Cu/S · certaines combinaisons file×chariot structurellement plus à risque · âge répartiteur (nb coulées depuis dernier changement) = variable à construire · <em>Levier : cartographie risque BLSR par machine_id (heatmap file×chariot) · règle de remplacement répartiteur selon taux BLSR mesuré · alerte MES si machine_id à risque élevé</em></li>
+                <li><strong>Usure cylindres R2 TCC</strong> — piste suggérée par la manager process aciérie : usure différentielle des cylindres R2 → pression de laminage asymétrique en rive → révélation préférentielle du défaut sur certaines rives · temporalité : par montage cylindres · variable à construire : nb_coulées_depuis_changement_cylindres_R2 · <em>Levier : analyse taux BLSR par montage cylindres R2 → règle de remplacement fondée sur signal qualité mesuré</em></li>
+              </ul>
+            </div>
+
+            <div class="ishi-card ishi-mo">
+              <div class="ishi-header">Main d'œuvre</div>
+              <ul>
+                <li><strong>Pilotage thermique four</strong> — dérive profil four → teta_surface_r2 dégradé · variable de surveillance, pas de levier sur le défaut · <em>Usage : alerte teta_surface_r2 comme signal précurseur — déclenche vérification chimie aciérie (Cu, Mn/S) en priorité</em></li>
+                <li><strong>Détection dérive Cu</strong> — absence de suivi Cu coulée par coulée en production · <em>Levier : tableau de bord Cu séquence J0</em></li>
+              </ul>
+            </div>
+
+            <div class="ishi-card ishi-mesure">
+              <div class="ishi-header">Mesure</div>
+              <ul>
+                <li><strong>Signal defecto BLSR</strong> — fiabilité et couverture bobines · <em>Levier : pipeline Orange 3 automatisé — anti-lampadaire</em></li>
+                <li><strong>Délai retour info aciérie</strong> — défaut détecté en galva (Montataire), cause en aciérie (Dunkerque) → latence J+30 actuelle · <em>Levier : jointure filière J+1</em></li>
+                <li><strong>temp_poche manquante</strong> — variable thermique aciérie non encore jointurée au MES · <em>Levier : jointure no_coulée → MES aciérie — bloquant Phase 0</em></li>
+                <li><strong>rang_sequence manquant</strong> — position de la coulée dans sa séquence non stockée directement · à reconstruire via date_deb_seq_real · <em>Levier : variable dérivée à construire — proxy accumulation Cu séquence</em></li>
+                <li><strong>nb_coulees_depuis_nettoyage manquant</strong> — historique nettoyage poche absent de la BDD · <em>Levier : jointure planning maintenance MES (à demander manager process aciérie) — variable clé pour isoler l'accumulation Cu réelle</em></li>
+                <li><strong>âge_repartiteur manquant</strong> — usure répartiteur par file×chariot non renseignée · <em>Levier : jointure planning maintenance CC → variable dérivée nb_coulees_depuis_changement_repartiteur</em></li>
+              </ul>
+            </div>
+
           </div>
-        </details>
+        </div>
 
         <div class="continuation-box">
           <h3>Ce que le poste permettrait de compléter</h3>
           <div class="continuation-steps">
             <div class="cont-step done">
-              <span class="cont-label">Réalisé en alternance</span>
-              <p>Signaux statistiques Cu + Mn/S identifiés. Base analytique construite. Hypothèses de root causes formulées.</p>
+              <span class="cont-label">Alternance — réalisé</span>
+              <p>Signaux statistiques Cu + Mn/S identifiés et significatifs. Base analytique construite. Hypothèses de root causes formulées et cohérentes avec la littérature.</p>
             </div>
             <div class="cont-arrow">→</div>
             <div class="cont-step next">
-              <span class="cont-label">Projection poste</span>
-              <p>A3 complet : cible quantifiée → Ishikawa → priorisation → plan d’actions → suivi des résultats → standardisation et diffusion aux équipes.</p>
+              <span class="cont-label">Poste — étape suivante</span>
+              <p>A3 complet : cible quantifiée → Ishikawa → <strong>AMDEC inversée</strong> (cotation IPR data-driven : O mesuré sur données process, G objectivé par impact économique filière, D évalué sur délai retour info) → root causes priorisées → <strong>plan d'actions ciblé</strong> → <strong>Suivi des résultats</strong> (vérification efficacité des actions, indicateurs de contrôle) → <strong>Standardisation &amp; partage</strong> (mise à jour spécifications nuance, diffusion aux équipes concernées, capitalisation pour les autres nuances du carnet).</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- VISION DU POSTE -->
     <section id="vision">
       <div class="section-inner">
         <h2>Vision du poste</h2>
         <p class="lead">4 axes de projet structurés autour d'une contrainte transverse commune : la composition de la charge métallique BOF.</p>
 
+        <!-- ===== VERSION A — sections Enjeu/Variables/Leviers/Outils ===== -->
+        <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#C04E0E;margin-bottom:0.5rem;">Listes structurées</p>
         <div class="axes-grid">
+
           <div class="axe-card">
             <div class="axe-num">A3-1</div>
-            <h3>Maîtrise des éléments résiduels & ségrégation</h3>
+            <h3>Maîtrise des éléments résiduels &amp; ségrégation</h3>
             <div class="axe-section">
               <span class="axe-label">Enjeu</span>
-              <p>Cu et éléments tramp non éliminables au BOF — lien direct avec la décarbonation et la qualité produit.</p>
+              <p>Cu / éléments tramp non éliminables au BOF — lien direct avec la décarbonation (↑ ferrailles → ↑ Cu tendanciel). Trois sous-problèmes distincts, pilotage différencié par segment.</p>
             </div>
             <div class="axe-section">
               <span class="axe-label">Variables pilotées</span>
               <ul class="axe-vars">
-                <li>Cu · As · Ni · Sn</li>
-                <li>P résiduel</li>
-                <li>Ségrégation centrale CC</li>
-                <li>B_libre sur nuances press hardening</li>
+                <li><strong>Cu · As · Ni · Sn</strong> — Cu_eq_DK = Cu + 2×As + Ni/3 — distribution par séquence, Spearman vs défauts surface</li>
+                <li><strong>P résiduel</strong> — cofacteur AHSS press hardening : P ségrège aux joints de grains → temper embrittlement · interaction P×Cu synergique · seuil BOF absolu P &lt; 0,009%</li>
+                <li><strong>Ségrégation centrale CC</strong> — coefficients S (~10–15) &gt; P (~6–8) &gt; C (~2–3) — enrichissement zone centrale via vitesse coulée + surchauffe + EMS</li>
+                <li><strong>B_libre (Usibor®)</strong> — B_libre = B_total − (N_libre × 10/14) — BN précipitation → perte trempabilité · seuil B_libre ≥ 10 ppm</li>
               </ul>
             </div>
             <div class="axe-section">
               <span class="axe-label">Leviers</span>
-              <p>Cahier des charges ferrailles, règles de séquençage, seuils P, réglages vitesse / surchauffe / EMS.</p>
+              <p>Cahier des charges ferrailles différencié par segment · règle séquençage Cu · seuil P BOF · consignes surchauffe 15–20°C + vitesse nominale + EMS actif → réduction enrichissement P_centre ~15%</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Impact EAF-DRI 2029</span>
+              <p><strong>Phase transitoire (2029–2031) :</strong> EAF alimenté en ferrailles sélectionnées — Cu ~0,05–0,10 %, contrainte Cu toujours active, pilotage analytique indispensable. <strong>Phase DRI (2031+) :</strong> montée en charge DRI/HBI (Cu &lt; 0,02 %) → Cu se détend structurellement → révision des seuils fiches nuances à anticiper. Nouveau paramètre de pilotage : <code>source_file_liquide</code> (BOF/EAF) pour différencier les profils chimiques en séquençage CC.</p>
+            </div>
+            <div class="axe-section axe-outil-block">
+              <span class="axe-label">Outils</span>
+              <p>KNIME WF01/WF06 — Mann-Whitney Cu vs défauts · Spearman rang séquence × Cu · Cpk P par coulée AHSS · WF09 proxy ségrégation : P_moy × f(vitesse_CC) × f(EMS) · alerte delta_vitesse &gt; 0,1 m/min</p>
             </div>
           </div>
 
           <div class="axe-card">
             <div class="axe-num">A3-2</div>
-            <h3>Maîtrise inclusionnaire & H dissous</h3>
+            <h3>Maîtrise inclusionnaire &amp; H dissous</h3>
             <div class="axe-section">
               <span class="axe-label">Enjeu</span>
-              <p>Propreté chimique de l’acier liquide, incidents de coulée et défauts de surface.</p>
+              <p>Propreté chimique de l'acier liquide → bouchages busette → incidents coulée → défauts surface. L'[O] dissous n'est pas mesuré directement — pilotage par proxies analytiques.</p>
             </div>
             <div class="axe-section">
               <span class="axe-label">Variables pilotées</span>
               <ul class="axe-vars">
-                <li>[Al]sol</li>
-                <li>Ca/Al</li>
-                <li>Bouchages busette</li>
-                <li>H dissous</li>
+                <li><strong>[Al]sol 0,025–0,060%</strong> — proxy [O] dissous (loi Krupkowski : [Al]²·[O]³ = K_T) · hors fenêtre = [O] élevé ou clusters Al₂O₃ · criticité 🔴 NGO haut Si / Tinplate 0,15 mm / Usibor® sans RH</li>
+                <li><strong>Ca/Al 0,10–0,14</strong> — proxy modification inclusionnaire : Al₂O₃ solide → C12A7 liquide (non bouchant) · fenêtre étroite Si élevé</li>
+                <li><strong>Bouchages busette</strong> — Spearman([Al]sol × nb_bouchages) + Spearman(Ca/Al × nb_bouchages) → hiérarchisation causes</li>
+                <li><strong>H dissous &lt; 2 ppm</strong> — seuil transversal · critique sans RH (HSLA · Usibor®/Fortiform®) · reprise H Tinplate/TFS post-RH</li>
               </ul>
             </div>
             <div class="axe-section">
               <span class="axe-label">Leviers</span>
-              <p>Ajustement Al et Ca, basicité laitier, FeO+MnO, RH et suivi des proxies de propreté.</p>
+              <p>Ajustement Al et Ca-fil par segment · basicité laitier · réduction FeO+MnO laitier · dégazage RH (H) · Measle Chart</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Impact EAF-DRI 2029</span>
+              <p><strong>Gangue DRI :</strong> SiO₂ (2–5 %) et Al₂O₃ (0,5–2 %) résiduels du DRI modifient le laitier LF → basicité chute si CaO non ajusté → désulfuration dégradée (Ls &lt; 100–150 vs 200–500 en BF-BOF) → MnS fins → pinning. <strong>H₂ :</strong> HBI humide (stockage maritime Dunkerque) → H 6–10 ppm en sortie EAF vs 2–4 ppm BF-BOF → dégazage RH H prolongé. Adaptation requise : protocole CaO + CaF₂ dès début LF, contrôle humidité HBI à réception.</p>
+            </div>
+            <div class="axe-section axe-outil-block">
+              <span class="axe-label">Outils</span>
+              <p>KNIME WF03 — Cpk [Al]sol · Cpk Ca/Al · bouchages/séquence · Measle Chart incidents · Spearman bouchages vs proxies · analyseur H en ligne</p>
             </div>
           </div>
 
@@ -318,19 +317,27 @@
             <h3>Maîtrise C/N — Dégazage RH</h3>
             <div class="axe-section">
               <span class="axe-label">Enjeu</span>
-              <p>Même levier RH, mais conséquences différentes selon le segment produit.</p>
+              <p>Même levier RH, trois manifestations de défaillance distinctes selon le segment — le pilotage doit être différencié par nuance.</p>
             </div>
             <div class="axe-section">
-              <span class="axe-label">Variables pilotées</span>
+              <span class="axe-label">Variables pilotées — par segment</span>
               <ul class="axe-vars">
-                <li>NGO : C et N ultra-bas</li>
-                <li>IF : N libre, Ti/N</li>
-                <li>Packaging : N libre, Al/N</li>
+                <li><strong>NGO iCARe®</strong> — C &lt; 20 ppm · N &lt; 25 ppm → dégazage RH le plus exigeant du carnet · Cu &lt; 0,05% (tension décarbonation maximale) · dérive campagne par campagne à surveiller</li>
+                <li><strong>IF Ti/Nb · IF Ti</strong> — triple contrôle : N sortie RH &lt; 35 ppm · N libre &lt; 5 ppm · Ti/N &gt; 4,0 · si Ti/N insuffisant → TiN précipite en busette → bouchage CC</li>
+                <li><strong>Tinplate / TFS</strong> — N libre &lt; 8 ppm · vieillissement post-étamage → durcissement parasite → emboîtage raté · Al/N &gt; 3,5</li>
               </ul>
             </div>
             <div class="axe-section">
               <span class="axe-label">Leviers</span>
-              <p>Durée et niveau vide RH, ajout Ti, suivi coulée par coulée, surveillance par campagne.</p>
+              <p>Durée et niveau vide RH · ajout Ti séquencé · suivi Al/N et Ti/N coulée par coulée · alerte dérive C/N entre campagnes RH</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Impact EAF-DRI 2029</span>
+              <p><strong>N pick-up arc EAF :</strong> l'arc électrique dissocie N₂ atmosphérique → N en sortie EAF = 60–100 ppm (vs 20–35 ppm BF-BOF). Le RH doit dénitrurer 2 à 3× plus → vide plus poussé (&lt; 0,5 mbar), durée allongée (25–35 min vs 15–20 min). Si N &gt; 80 ppm sur nuance IF : déclassement vers nuance moins sensible. <strong>C :</strong> C en sortie EAF = 0,05–0,15 % (vs 0,03–0,06 % BOF) → décarburation RH plus longue. Impact direct sur le cycle de production et le séquençage CC.</p>
+            </div>
+            <div class="axe-section axe-outil-block">
+              <span class="axe-label">Outils</span>
+              <p>KNIME WF04 — carte de contrôle C/N · Shapiro-Wilk · Cpk par CTQ · ratio Ti/N calculé par coulée · suivi dérive RH par campagne · alerte N libre croisée avec segment</p>
             </div>
           </div>
 
@@ -339,178 +346,486 @@
             <h3>Maîtrise thermique de séquence</h3>
             <div class="axe-section">
               <span class="axe-label">Enjeu</span>
-              <p>Dérive thermique sur séquences longues, avec effets sur bouchage ou ségrégation.</p>
+              <p>Dérive thermique sur séquences longues → surchauffe poche en limite basse → bouchage busette en début de coulée → incidents CC. La température poche n'est pas stockée directement dans la BDD — variable à reconstruire via jointure MES.</p>
             </div>
             <div class="axe-section">
               <span class="axe-label">Variables pilotées</span>
               <ul class="axe-vars">
-                <li>T° poche</li>
-                <li>Durée entre traitements et coulée</li>
-                <li>Rang dans la séquence</li>
+                <li><strong>T° poche (T_liquidus + surchauffe)</strong> — surchauffe cible 15–20°C · trop basse → bouchage · trop haute → ségrégation aggravée (interaction A3-1)</li>
+                <li><strong>Durée entre traitements LF/RH et coulée</strong> — pertes thermiques par rayonnement et conduction poche → dérive cumulée sur séquence longue</li>
+                <li><strong>Rang dans la séquence</strong> — les premières coulées exposées à la poche froide · les dernières à l'accumulation thermique</li>
               </ul>
             </div>
             <div class="axe-section">
               <span class="axe-label">Leviers</span>
-              <p>Modèle de bilan thermique, règle de surchauffe adaptée et alerte prédictive MES.</p>
+              <p>Modèle prédictif bilan thermique poche (régression) → anticipation dérive · règle de surchauffe adaptée selon rang séquence et durée · alerte MES si T° estimée hors fenêtre avant départ coulée</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Impact EAF-DRI 2029</span>
+              <p><strong>Fenêtre thermique EAF :</strong> sortie EAF ~1580–1620 °C (vs 1620–1660 °C BOF) → marge thermique réduite pour le LF, risque de bouchage accru en début de séquence. <strong>Double file liquide :</strong> cohabitation BOF + EAF alimentant la même CC → conflit de séquençage quand les profils chimiques sont incompatibles (Cu bas/N élevé EAF vs Cu élevé/N bas BOF) → 2–4 brames de transition à déclasser par changement de file. Adaptation requise : règles de séquençage file-croisée, groupage des coulées par source, outil de simulation de mélange répartiteur.</p>
+            </div>
+            <div class="axe-section axe-outil-block">
+              <span class="axe-label">Outils</span>
+              <p>KNIME WF05 — régression série temporelle T° poche · Spearman durée_LF-CC × incidents bouchage · jointure MES no_coulée → T_poche · alerte prédictive avant départ coulée</p>
             </div>
           </div>
+
         </div>
 
-        <details class="result-box" style="margin-top:1.5rem;">
-          <summary><strong>Voir le détail des tables de criticité et des outils de supervision</strong></summary>
-          <div style="margin-top:1rem;">
-            <p>Les tables détaillées par segment et les workflows KNIME / Python peuvent être joints en annexe technique ou présentés en entretien.</p>
-            <ul>
-              <li>Criticités par segment : IF, NGO, AHSS, Emballage</li>
-              <li>Workflows de supervision : résiduels, inclusionnaire, RH, thermique</li>
-              <li>Alerte par coulée et logique Rule Engine par nuance</li>
-            </ul>
+        <hr style="margin:2rem 0;border:none;border-top:3px dashed #E2661A;" />
+
+        <!-- ===== VERSION B — tables de criticité par segment ===== -->
+        <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#1a4a8a;margin-bottom:0.5rem;">Tables de criticité</p>
+        <div class="axes-grid">
+
+          <!-- A3-1 -->
+          <div class="axe-card">
+            <div class="axe-num">A3-1</div>
+            <h3>Maîtrise des éléments résiduels &amp; ségrégation</h3>
+            <div class="axe-section">
+              <span class="axe-label">Enjeu</span>
+              <p>Cu / éléments tramp non éliminables au BOF — lien direct avec la décarbonation. Criticité et CTQ pilotés <strong>différents par segment</strong>.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Criticité par segment</span>
+              <table class="seg-crit-table">
+                <thead><tr><th>Segment</th><th>CTQ clé</th><th>Risque</th></tr></thead>
+                <tbody>
+                  <tr><td>IF Ti/Nb (DC06)</td><td>Cu · Mn/S · rang séquence</td><td>BLSR — LME + FeS joints grains</td></tr>
+                  <tr class="crit-row-hi"><td>NGO iCARe®</td><td>Cu &lt; 0,05% · Cu_eq_DK</td><td>🔴 Tension décarbonation max</td></tr>
+                  <tr class="crit-row-hi"><td>Usibor® / Fortiform®</td><td>P &lt; 0,009% · B_libre ≥ 10 ppm · ségrégation CC</td><td>🔴 Temper embrittlement · perte trempabilité</td></tr>
+                  <tr><td>HSLA Nb</td><td>Cu &lt; 0,22% · Nb(C,N)</td><td>Fragilisation intergranulaire</td></tr>
+                  <tr><td>Tinplate / TFS</td><td>Cu tendanciel</td><td>Piqûres post-étamage</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Ségrégation CC — sous-axe AHSS</span>
+              <p>Coefficients : S (~10–15) &gt; P (~6–8) &gt; C (~2–3) · Leviers : surchauffe 15–20°C · vitesse nominale · EMS actif → −15% enrichissement P_centre · alerte delta_vitesse &gt; 0,1 m/min · B_libre = B_total − (N_libre × 10/14)</p>
+            </div>
+            <div class="axe-section axe-outil-block">
+              <span class="axe-label">Outils</span>
+              <p>KNIME WF01/WF06 — Mann-Whitney · Spearman rang séquence × Cu · Cpk P coulée AHSS · WF09 proxy ségrégation P_moy × f(vitesse_CC) × f(EMS)</p>
+            </div>
           </div>
-        </details>
+
+          <!-- A3-2 -->
+          <div class="axe-card">
+            <div class="axe-num">A3-2</div>
+            <h3>Maîtrise inclusionnaire &amp; H dissous</h3>
+            <div class="axe-section">
+              <span class="axe-label">Enjeu</span>
+              <p>[O] dissous non mesuré directement — pilotage par proxies. Fenêtre CTQ étroite et <strong>criticité variable selon épaisseur et teneur Si</strong>.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Criticité par segment</span>
+              <table class="seg-crit-table">
+                <thead><tr><th>Segment</th><th>[Al]sol cible</th><th>Ca/Al</th><th>Risque spécifique</th></tr></thead>
+                <tbody>
+                  <tr class="crit-row-hi"><td>NGO haut Si</td><td>0,025–0,040%</td><td>Fenêtre étroite Si↑</td><td>🔴 Clusters Al₂O₃ · bouchage</td></tr>
+                  <tr class="crit-row-hi"><td>Tinplate (0,15 mm)</td><td>0,025–0,050%</td><td>CaS → striure</td><td>🔴 Inclusion 10 µm = 3–7% épaisseur · piqûres</td></tr>
+                  <tr class="crit-row-hi"><td>Usibor® (sans RH)</td><td>0,040–0,060%</td><td>0,10–0,14</td><td>🔴 Pas de dégazage RH — [O] non réduit</td></tr>
+                  <tr><td>IF Ti/Nb</td><td>0,025–0,060%</td><td>0,10–0,14</td><td>🟡 Bouchage TiN si Ca/Al hors fenêtre</td></tr>
+                  <tr><td>HSLA</td><td>0,025–0,060%</td><td>0,10–0,14</td><td>🟢 Standard</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">H dissous — transversal</span>
+              <p>Seuil &lt; 2 ppm · critique sans RH (HSLA · Usibor® / Fortiform®) · risque résiduel Tinplate/TFS post-RH · Spearman [Al]sol + Ca/Al × nb_bouchages → hiérarchisation causes</p>
+            </div>
+            <div class="axe-section axe-outil-block">
+              <span class="axe-label">Outils</span>
+              <p>KNIME WF03 — Cpk [Al]sol · Cpk Ca/Al · bouchages/séquence · Measle Chart · Spearman bouchages vs proxies · analyseur H en ligne</p>
+            </div>
+          </div>
+
+          <!-- A3-3 -->
+          <div class="axe-card">
+            <div class="axe-num">A3-3</div>
+            <h3>Maîtrise C/N — Dégazage RH</h3>
+            <div class="axe-section">
+              <span class="axe-label">Enjeu</span>
+              <p>Même levier RH — <strong>trois défaillances distinctes</strong> selon le segment. Le CTQ critique et la conséquence d'un hors-spec sont totalement différents.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Criticité par segment</span>
+              <table class="seg-crit-table">
+                <thead><tr><th>Segment</th><th>CTQ RH</th><th>Conséquence hors-spec</th></tr></thead>
+                <tbody>
+                  <tr class="crit-row-hi"><td>NGO iCARe®</td><td>C &lt; 20 ppm · N &lt; 25 ppm · Cu &lt; 0,05%</td><td>🔴 Pertes magnétiques W/kg — rebut nuance</td></tr>
+                  <tr><td>IF Ti/Nb · IF Ti</td><td>N sortie RH &lt; 35 ppm · N libre &lt; 5 ppm · Ti/N &gt; 4,0</td><td>TiN en busette → bouchage CC · si Ti/N &lt; 4,0</td></tr>
+                  <tr><td>Tinplate / TFS</td><td>N libre &lt; 8 ppm · Al/N &gt; 3,5</td><td>Vieillissement → durcissement → emboîtage raté</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="axe-section axe-outil-block">
+              <span class="axe-label">Outils</span>
+              <p>KNIME WF04 — carte de contrôle C/N · Shapiro-Wilk · Cpk par CTQ · Ti/N calculé coulée par coulée · suivi dérive RH par campagne · alerte N libre croisée segment</p>
+            </div>
+          </div>
+
+          <!-- A3-4 -->
+          <div class="axe-card">
+            <div class="axe-num">A3-4</div>
+            <h3>Maîtrise thermique de séquence</h3>
+            <div class="axe-section">
+              <span class="axe-label">Enjeu</span>
+              <p>Dérive T° poche sur séquences longues → surchauffe en limite basse → bouchage busette ou, à l'inverse, ségrégation aggravée si trop haute (interaction A3-1). Variable T_poche à reconstruire via jointure MES.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Criticité par segment</span>
+              <table class="seg-crit-table">
+                <thead><tr><th>Segment</th><th>Contrainte thermique</th><th>Risque</th></tr></thead>
+                <tbody>
+                  <tr class="crit-row-hi"><td>Usibor® / Fortiform®</td><td>Surchauffe 20–25°C basse · sans RH</td><td>🔴 Ségrégation P aggravée · bouchage début coulée</td></tr>
+                  <tr><td>NGO iCARe®</td><td>Surchauffe nominale 15–20°C</td><td>Bouchage si T_poche basse en début séquence</td></tr>
+                  <tr><td>IF Ti/Nb · Tinplate</td><td>Surchauffe standard</td><td>Dérive cumulée séquence longue</td></tr>
+                  <tr><td>HSLA</td><td>Surchauffe standard</td><td>Standard — rang séquence à surveiller</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="axe-section axe-outil-block">
+              <span class="axe-label">Outils</span>
+              <p>KNIME WF05 — régression bilan thermique poche · Spearman durée_LF-CC × incidents bouchage · jointure MES no_coulée → T_poche · alerte prédictive avant départ coulée</p>
+            </div>
+          </div>
+
+        </div>
+
+        <hr style="margin:2rem 0;border:none;border-top:3px dashed #E2661A;" />
+
+        <!-- ===== SECTION 3 — OUTILS DE SUPERVISION QUALITÉ ===== -->
+        <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#1a1a1a;margin-bottom:0.5rem;">Outils de supervision qualité</p>
+        <div class="axes-grid">
+
+          <!-- A3-1 -->
+          <div class="axe-card">
+            <div class="axe-num">A3-1</div>
+            <h3>Éléments résiduels &amp; ségrégation</h3>
+            <div class="axe-section">
+              <span class="axe-label">KNIME — pipeline analytique</span>
+              <ul class="axe-vars">
+                <li><strong>WF01</strong> — base brames agrégée : jointure no_coulée → composition OES + paramètres process MES · prérequis de tous les WF · taux couverture champs calculé</li>
+                <li><strong>WF02</strong> — distribution Cu et éléments tramp par séquence · tendance taux ferrailles × Cu · Spearman taux_ferrailles vs Cu · histogramme Cu_eq_DK par segment</li>
+                <li><strong>WF04</strong> — RCA BLSR IF Ti/Nb : Mann-Whitney Cu + Mn/S vs signal BLSR · CART Gini → règles seuil → export WF06</li>
+                <li><strong>WF05</strong> — régression Cu + MnS → seuil critique IF Ti/Nb · chaînon manquant : seuil Cu tolérable selon Mn/S mesuré · export cahier des charges ferrailles</li>
+                <li><strong>WF07</strong> — thermodynamique MnS : calcul [Mn]×[S] = Mn_pct × S_ppm / 10000 · variable X enrichie injectée dans WF01</li>
+                <li><strong>WF08</strong> — RCA Y continu NGO/AHSS : régression + Spearman sur Y continu (W/kg, Rm) · bilan coût non-conformité · seuils opérationnels → WF06</li>
+                <li><strong>WF09</strong> — proxy ségrégation CC : P_moy × f(vitesse_CC) × f(EMS) · alerte delta_vitesse &gt; 0,1 m/min · Spearman proxy vs incidents R&amp;D</li>
+                <li><strong>WF06</strong> — alerte automatisée coulée/coulée : agrège seuils WF04/05/08/09 · Rule Engine par nuance · export dashboard MES · B_libre Usibor® calculé</li>
+              </ul>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Python — calculs complémentaires</span>
+              <ul class="axe-vars">
+                <li>Cu_eq_DK = Cu + 2×As + Ni/3 · calcul B_libre = B_total − (N_libre × 10/14) · scripts d'agrégation filière (jointure no_coulée cross-sites)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- A3-2 -->
+          <div class="axe-card">
+            <div class="axe-num">A3-2</div>
+            <h3>Inclusionnaire &amp; H dissous</h3>
+            <div class="axe-section">
+              <span class="axe-label">KNIME — pipeline analytique</span>
+              <ul class="axe-vars">
+                <li><strong>WF03</strong> — Cpk process par nuance × CTQ : [Al]sol · Ca/Al · basicité B2 · FeO+MnO laitier · bouchages par séquence · carte de contrôle Shewhart · Shapiro-Wilk normalité · Cpk LSL/USL par segment</li>
+                <li><strong>WF03 extension</strong> — Spearman [Al]sol × nb_bouchages + Spearman Ca/Al × nb_bouchages → hiérarchisation causes bouchage · Measle Chart : cartographie spatiale incidents par file CC × rang séquence</li>
+                <li><strong>WF06</strong> — alerte [Al]sol hors fenêtre par segment · alerte Ca/Al hors 0,10–0,14 · alerte H dissous &gt; 2 ppm sur nuances sans RH</li>
+              </ul>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Mesure process</span>
+              <ul class="axe-vars">
+                <li>Analyseur H en ligne (Hydris) — seuil &lt; 2 ppm · tracé par coulée · alerte automatique si dépassement sur HSLA / Usibor® / Fortiform®</li>
+                <li>[Al]sol OES poche + Ca/Al calculé post-traitement LF · basicité laitier B2 = CaO/SiO₂ mesurée</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- A3-3 -->
+          <div class="axe-card">
+            <div class="axe-num">A3-3</div>
+            <h3>C/N — Dégazage RH</h3>
+            <div class="axe-section">
+              <span class="axe-label">KNIME — pipeline analytique</span>
+              <ul class="axe-vars">
+                <li><strong>WF03</strong> — Cpk C · Cpk N · Cpk N libre · Cpk Ti/N · Cpk Al/N · par nuance et par campagne RH · carte de contrôle dérive inter-campagnes</li>
+                <li><strong>WF06</strong> — alerte N libre &gt; seuil selon segment : NGO &gt; 25 ppm · IF Ti/Nb &gt; 5 ppm · Tinplate &gt; 8 ppm · alerte Ti/N &lt; 4,0 sur IF Ti/Nb · alerte C &gt; 20 ppm NGO</li>
+              </ul>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Python — calculs complémentaires</span>
+              <ul class="axe-vars">
+                <li>Ti/N calculé coulée par coulée · N libre = N_total − N_combiné(TiN + AlN) · suivi dérive RH par campagne · export tableau de bord C/N J0</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- A3-4 -->
+          <div class="axe-card">
+            <div class="axe-num">A3-4</div>
+            <h3>Thermique de séquence</h3>
+            <div class="axe-section">
+              <span class="axe-label">KNIME — pipeline analytique</span>
+              <ul class="axe-vars">
+                <li><strong>WF03</strong> — suivi surchauffe par coulée · Spearman durée_LF-CC × incidents bouchage · carte de contrôle T° poche par rang séquence</li>
+                <li><strong>WF06</strong> — alerte T° poche estimée hors fenêtre avant départ coulée · alerte surchauffe &lt; 15°C sur Usibor® / NGO</li>
+              </ul>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Python — modèle prédictif</span>
+              <ul class="axe-vars">
+                <li>Régression bilan thermique poche : T_poche(t) = T_LF − k × durée − pertes_rayonnement(rang) · jointure MES no_coulée → T_poche · variable durée_LF-CC construite · alerte prédictive avant départ coulée</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
 
         <div class="contrainte-box">
-          <h3>Contrainte transverse principale</h3>
-          <p>La décarbonation (↑ taux ferrailles) est une contrainte stratégique donnée. Les A3 qualité doivent accompagner cette transition en trouvant des leviers robustes dans le cadre BOF actuel.</p>
+          <h3>Contrainte transverse principale — Décarbonation &amp; EAF-DRI 2029</h3>
+          <p>La <strong>directive décarbonation</strong> (↑ taux ferrailles) est une décision stratégique actée par le groupe. L'investissement EAF Dunkerque (1,3 Md€, mise en service 2029, 2 Mt/an) marque la transition vers une <strong>double file liquide BOF + EAF</strong> sur le même site. Le DRI/HBI importé résoudra structurellement le problème Cu (Cu &lt; 0,02 % dans le minerai) — mais cette transition redistribue les contraintes sur les 4 axes A3 :</p>
+          <ul style="margin:0.5rem 0 0 1.2rem;font-size:0.85rem;line-height:1.6;">
+            <li><strong>A3-1</strong> — Cu contraint en phase transitoire ferrailles (2029–2031), puis détente structurelle avec montée DRI (2031+)</li>
+            <li><strong>A3-2</strong> — gangue DRI (SiO₂, Al₂O₃) modifie le laitier LF → désulfuration dégradée · H élevé si HBI humide</li>
+            <li><strong>A3-3</strong> — N pick-up arc EAF (60–100 ppm vs 20–35 ppm BF-BOF) → RH sollicité 2 à 3× plus · C plus élevé en entrée RH</li>
+            <li><strong>A3-4</strong> — fenêtre thermique EAF réduite · conflits de séquençage CC entre files BOF et EAF (profils chimiques incompatibles)</li>
+          </ul>
+          <p style="margin-top:0.5rem;">Le Manager Support Process qui aura construit le système analytique pendant la contrainte BOF actuelle sera le mieux placé pour piloter la transition vers les nouvelles spécifications EAF-DRI.</p>
         </div>
       </div>
     </section>
 
-    <section id="pilotage">
-      <div class="section-inner">
-        <h2>Pilotage multiprojet</h2>
-        <p class="lead">Classeur de pilotage complet — 54 onglets couvrant les 4 axes A3, 12 sous-segments, 17 nuances, Gantt portefeuille, grille de pilotage, journal d'incidents, fiches d'essai et workflows KNIME. Navigation par onglets en bas du classeur.</p>
-        <p style="font-size:0.85rem; color:var(--text-soft); margin-top:0.5rem;">Utilisez le bouton <strong>plein écran</strong> en bas à droite du classeur pour une lecture confortable.</p>
-        <div style="margin-top:1.5rem; border:1px solid var(--gray-border); border-radius:var(--radius); overflow:hidden;">
-          <iframe width="100%" height="600" frameborder="0" scrolling="yes" src="https://synpase2026-my.sharepoint.com/personal/sergebuasa_synpase2026_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc={bb20c971-be06-45a2-abdd-e067dabb7f3f}&action=embedview&ActiveCell='INDEX'!A1&wdHideGridlines=True&wdHideHeaders=True&wdInConfigurator=True&wdInConfigurator=True&edaebf=rslc0"></iframe>
-        </div>
-    </section>
-
+    <!-- COUVERTURE CARNET NUANCES -->
     <section id="carnet" class="section-alt">
       <div class="section-inner">
-        <h2>Carnet de nuances</h2>
-        <p class="lead">Pipeline analytique dupliquable — segment par segment, nuance par nuance. Point d’entrée par grandes familles : IF, NGO, AHSS, emballage.</p>
+        <h2>Couverture carnet de nuances</h2>
+        <p class="lead">Pipeline analytique dupliquable — segment par segment, nuance par nuance. 9 nuances pilotes · 4 segments · cofacteur critique identifié par sous-segment.</p>
 
         <div class="carnet-grid">
+
           <div class="seg-block">
             <div class="seg-header seg-if">IF / Extra doux — Emboutissage (EN 10130)</div>
             <div class="sseg-row">
-              <div class="sseg-label">IF Ti/Nb<span class="cofact">Cu · Mn/S · N libre · Ti/N</span></div>
-              <div class="nuances-list"><span class="nuance nuance-done">DC06 ✅</span></div>
+              <div class="sseg-label">IF Ti/Nb<span class="cofact">Cu · Mn/S → BLSR · N libre &lt; 5 ppm · Ti/N &gt; 4,0</span></div>
+              <div class="nuances-list">
+                <span class="nuance nuance-done">DC06 ✅</span>
+              </div>
             </div>
             <div class="sseg-row">
-              <div class="sseg-label">IF Ti<span class="cofact">MnS + TiN</span></div>
-              <div class="nuances-list"><span class="nuance nuance-todo">DC05</span></div>
+              <div class="sseg-label">IF Ti<span class="cofact">MnS + TiN · Ti/N &gt; 4,0 · N libre &lt; 5 ppm</span></div>
+              <div class="nuances-list">
+                <span class="nuance nuance-todo">DC05</span>
+              </div>
             </div>
             <div class="sseg-row">
-              <div class="sseg-label">Extra doux<span class="cofact">Mn/S · [Al]sol · Ca/Al</span></div>
-              <div class="nuances-list"><span class="nuance nuance-todo">DC04</span></div>
+              <div class="sseg-label">Extra doux<span class="cofact">Mn/S &gt; 10 · [Al]sol 0,025–0,060% · Ca/Al 0,10–0,14</span></div>
+              <div class="nuances-list">
+                <span class="nuance nuance-todo">DC04</span>
+              </div>
             </div>
+            <div class="seg-axes">A3-1 Cu/tramp · A3-2 Inclusionnaire · A3-3 C/N RH (IF Ti/Nb · IF Ti)</div>
           </div>
 
           <div class="seg-block">
             <div class="seg-header seg-ngo">NGO — Aciers électriques (EN 10106)</div>
             <div class="sseg-row">
-              <div class="sseg-label">iCARe® Save<span class="cofact">Cu bas · C/N ultra-bas · inclusionnaire</span></div>
-              <div class="nuances-list"><span class="nuance nuance-exp">Qualification en cours 🔬</span></div>
+              <div class="sseg-label">iCARe® Save<span class="cofact">C/N ultra-bas · Cu &lt; 0,05% · [Al]sol 0,025–0,040% (criticité 🔴 Si élevé) · ségrégation S center line</span></div>
+              <div class="nuances-list">
+                <span class="nuance nuance-exp">0.20–0.30mm · Re 420 MPa · basses pertes · rotor compact 🔬</span>
+              </div>
             </div>
             <div class="sseg-row">
-              <div class="sseg-label">iCARe® Torque<span class="cofact">C/N ultra-bas · Si ajusté</span></div>
-              <div class="nuances-list"><span class="nuance nuance-exp">Qualification en cours 🔬</span></div>
+              <div class="sseg-label">iCARe® Torque<span class="cofact">C/N ultra-bas · Si ajusté → polarisation B · [Al]sol · Ca/Al fenêtre étroite</span></div>
+              <div class="nuances-list">
+                <span class="nuance nuance-exp">0.25–0.35mm · haute polarisation B · couple élevé basse vitesse 🔬</span>
+              </div>
             </div>
             <div class="sseg-row">
-              <div class="sseg-label">iCARe® Speed<span class="cofact">Cu bas · Re élevé · inclusionnaire</span></div>
-              <div class="nuances-list"><span class="nuance nuance-exp">Qualification en cours 🔬</span></div>
+              <div class="sseg-label">iCARe® Speed<span class="cofact">C/N ultra-bas · Si/Mn → Re 500 MPa · [Al]sol · Ca/Al fenêtre étroite</span></div>
+              <div class="nuances-list">
+                <span class="nuance nuance-exp">0.35mm · Re 500 MPa · résistance centrifuge · rotor grande vitesse 🔬</span>
+              </div>
             </div>
+            <div class="seg-note">iCARe® — contrainte commune aciérie : Cu &lt; 0.05% · C/N ultra-bas (RH) · qualification Mardyck en cours</div>
+            <div class="seg-axes">A3-1 Cu/tramp · A3-2 Inclusionnaire · A3-3 C/N RH</div>
           </div>
 
           <div class="seg-block">
-            <div class="seg-header seg-ahss">AHSS — Haute résistance</div>
+            <div class="seg-header seg-ahss">AHSS — Haute résistance (EN 10346 / EN 10149)</div>
             <div class="sseg-row">
-              <div class="sseg-label">HSLA Nb<span class="cofact">Nb(C,N) · Cu · H dissous</span></div>
-              <div class="nuances-list"><span class="nuance nuance-todo">HSLA 420</span></div>
+              <div class="sseg-label">HSLA Nb<span class="cofact">Nb(C,N) précipitation · Cu &lt; 0.22% · H dissous &lt; 2 ppm (sans RH)</span></div>
+              <div class="nuances-list">
+                <span class="nuance nuance-todo">HSLA 420</span>
+              </div>
             </div>
             <div class="sseg-row">
-              <div class="sseg-label">Press hardening<span class="cofact">P résiduel · B_libre · thermique</span></div>
+              <div class="sseg-label">Press hardening<span class="cofact">P résiduel · ségrégation CC · P×Cu synergique · H dissous &lt; 2 ppm (sans RH) · B_libre ≥ 10 ppm (trempabilité)</span></div>
               <div class="nuances-list">
                 <span class="nuance nuance-todo">Usibor® 1500</span>
                 <span class="nuance nuance-todo">Fortiform®</span>
               </div>
             </div>
+            <div class="seg-axes">A3-1 Cu/tramp · A3-2 Inclusionnaire · A3-4 Thermique</div>
           </div>
 
           <div class="seg-block">
             <div class="seg-header seg-emb">Emballage (EN 10202)</div>
             <div class="sseg-row">
-              <div class="sseg-label">Tinplate<span class="cofact">N libre · Al/N · [Al]sol · Ca/Al</span></div>
-              <div class="nuances-list"><span class="nuance nuance-todo">Tinplate MR/DR</span></div>
+              <div class="sseg-label">Tinplate<span class="cofact">N libre &lt; 8 ppm + vieillissement · Al/N &gt; 3,5 · [Al]sol 0,025–0,050% (criticité 🔴 épaisseur 0,15 mm) · Ca/Al → CaS striure</span></div>
+              <div class="nuances-list">
+                <span class="nuance nuance-todo">Tinplate MR/DR</span>
+              </div>
             </div>
             <div class="sseg-row">
-              <div class="sseg-label">TFS bas C<span class="cofact">N libre · Al/N</span></div>
-              <div class="nuances-list"><span class="nuance nuance-todo">TFS bas C</span></div>
+              <div class="sseg-label">TFS bas C<span class="cofact">N libre &lt; 5 ppm · Al/N &gt; 3,5 · [Al]sol · Ca/Al</span></div>
+              <div class="nuances-list">
+                <span class="nuance nuance-todo">TFS bas C</span>
+              </div>
             </div>
+            <div class="seg-axes">A3-1 Cu/tramp · A3-2 Inclusionnaire · A3-3 C/N RH</div>
           </div>
+
         </div>
 
-        <details class="result-box" style="margin-top:1.5rem;">
-          <summary><strong>Voir le détail des CTQ par segment</strong></summary>
-          <div style="margin-top:1rem;">
-            <p>Le détail des CTQ, fenêtres et risques hors-spec est disponible pour chaque segment : IF, NGO, AHSS et emballage.</p>
-          </div>
-        </details>
+        <div class="carnet-legende">
+          <span class="nuance nuance-done">✅ Fiche finalisée</span>
+          <span class="nuance nuance-exp">🔬 En qualification expérimentale</span>
+          <span class="nuance nuance-todo">⬜ À démarrer</span>
+        </div>
+
+        <hr style="margin:2rem 0;border:none;border-top:3px dashed #E2661A;" />
+
+        <!-- ===== CARNET ENRICHI — criticités par segment ===== -->
+        <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#1a1a1a;margin-bottom:1rem;">Criticités par segment — pilotage différencié</p>
+
+        <!-- IF / Extra doux -->
+        <div class="seg-block" style="margin-bottom:1.2rem;">
+          <div class="seg-header seg-if">IF / Extra doux — Emboutissage (EN 10130)</div>
+          <table class="seg-crit-table">
+            <thead><tr><th>Sous-segment</th><th>CTQ aciérie</th><th>Seuil / fenêtre</th><th>A3</th><th>Risque hors-spec</th></tr></thead>
+            <tbody>
+              <tr class="crit-row-hi"><td>IF Ti/Nb (DC06)</td><td>Cu · Mn/S · rang séquence</td><td>Cu_eq_DK · Mn/S &gt; 10</td><td>A3-1</td><td>🔴 BLSR — LME + FeS joints grains</td></tr>
+              <tr><td>IF Ti/Nb (DC06)</td><td>N libre · Ti/N</td><td>N libre &lt; 5 ppm · Ti/N &gt; 4,0</td><td>A3-3</td><td>TiN busette → bouchage CC</td></tr>
+              <tr><td>IF Ti/Nb (DC06)</td><td>[Al]sol · Ca/Al</td><td>0,025–0,060% · 0,10–0,14</td><td>A3-2</td><td>🟡 Bouchage si Ca/Al hors fenêtre</td></tr>
+              <tr><td>IF Ti (DC05)</td><td>N libre · Ti/N</td><td>N libre &lt; 5 ppm · Ti/N &gt; 4,0</td><td>A3-3</td><td>TiN busette → bouchage CC</td></tr>
+              <tr><td>Extra doux (DC04)</td><td>Mn/S · [Al]sol · Ca/Al</td><td>Mn/S &gt; 10 · 0,025–0,060% · 0,10–0,14</td><td>A3-1 · A3-2</td><td>FeS joints grains · bouchage inclusionnaire</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- NGO -->
+        <div class="seg-block" style="margin-bottom:1.2rem;">
+          <div class="seg-header seg-ngo">NGO — Aciers électriques (EN 10106)</div>
+          <table class="seg-crit-table">
+            <thead><tr><th>Sous-segment</th><th>CTQ aciérie</th><th>Seuil / fenêtre</th><th>A3</th><th>Risque hors-spec</th></tr></thead>
+            <tbody>
+              <tr class="crit-row-hi"><td>iCARe® Save · Torque · Speed</td><td>Cu · Cu_eq_DK</td><td>Cu &lt; 0,05%</td><td>A3-1</td><td>🔴 Tension décarbonation max — rebut nuance</td></tr>
+              <tr class="crit-row-hi"><td>iCARe® Save · Torque · Speed</td><td>C · N</td><td>C &lt; 20 ppm · N &lt; 25 ppm</td><td>A3-3</td><td>🔴 Pertes magnétiques W/kg — déclassement</td></tr>
+              <tr class="crit-row-hi"><td>iCARe® Save (haut Si)</td><td>[Al]sol</td><td>0,025–0,040% (fenêtre réduite Si↑)</td><td>A3-2</td><td>🔴 Clusters Al₂O₃ · bouchage busette</td></tr>
+              <tr><td>iCARe® Torque · Speed</td><td>[Al]sol · Ca/Al</td><td>[Al]sol standard · Ca/Al fenêtre étroite</td><td>A3-2</td><td>🟡 Bouchage si Ca/Al hors fenêtre</td></tr>
+              <tr><td>iCARe® Save</td><td>S — ségrégation center line</td><td>S coeff. ~10–15</td><td>A3-1</td><td>Défaut center line — épaisseur 0,20–0,30 mm</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- AHSS -->
+        <div class="seg-block" style="margin-bottom:1.2rem;">
+          <div class="seg-header seg-ahss">AHSS — Haute résistance (EN 10346 / EN 10149)</div>
+          <table class="seg-crit-table">
+            <thead><tr><th>Sous-segment</th><th>CTQ aciérie</th><th>Seuil / fenêtre</th><th>A3</th><th>Risque hors-spec</th></tr></thead>
+            <tbody>
+              <tr class="crit-row-hi"><td>Usibor® · Fortiform®</td><td>P résiduel · ségrégation CC</td><td>P &lt; 0,009% · P_centre via WF09</td><td>A3-1</td><td>🔴 Temper embrittlement · P×Cu synergique</td></tr>
+              <tr class="crit-row-hi"><td>Usibor® · Fortiform®</td><td>B_libre</td><td>B_libre ≥ 10 ppm</td><td>A3-1</td><td>🔴 BN précipitation → perte trempabilité</td></tr>
+              <tr class="crit-row-hi"><td>Usibor® · Fortiform®</td><td>[Al]sol · H dissous</td><td>0,040–0,060% · H &lt; 2 ppm (sans RH)</td><td>A3-2</td><td>🔴 [O] non réduit sans RH · fragilisation H</td></tr>
+              <tr class="crit-row-hi"><td>Usibor® · Fortiform®</td><td>Surchauffe · vitesse CC · EMS</td><td>20–25°C · nominale · actif</td><td>A3-4</td><td>🔴 Ségrégation P aggravée · bouchage début coulée</td></tr>
+              <tr><td>HSLA Nb</td><td>Cu · Nb(C,N) · H dissous</td><td>Cu &lt; 0,22% · H &lt; 2 ppm (sans RH)</td><td>A3-1 · A3-2</td><td>Fragilisation intergranulaire · risque H</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Emballage -->
+        <div class="seg-block" style="margin-bottom:1.2rem;">
+          <div class="seg-header seg-emb">Emballage (EN 10202)</div>
+          <table class="seg-crit-table">
+            <thead><tr><th>Sous-segment</th><th>CTQ aciérie</th><th>Seuil / fenêtre</th><th>A3</th><th>Risque hors-spec</th></tr></thead>
+            <tbody>
+              <tr class="crit-row-hi"><td>Tinplate MR/DR</td><td>[Al]sol</td><td>0,025–0,050% (criticité 🔴 épaisseur 0,15 mm)</td><td>A3-2</td><td>🔴 Inclusion 10 µm = 3–7% épaisseur → piqûres post-étamage</td></tr>
+              <tr class="crit-row-hi"><td>Tinplate MR/DR</td><td>N libre · Al/N</td><td>N libre &lt; 8 ppm · Al/N &gt; 3,5</td><td>A3-3</td><td>🔴 Vieillissement → durcissement → emboîtage raté</td></tr>
+              <tr><td>Tinplate MR/DR</td><td>Ca/Al</td><td>Standard · CaS → striure</td><td>A3-2</td><td>🟡 Striure de surface post-étamage</td></tr>
+              <tr><td>TFS bas C</td><td>N libre · Al/N · [Al]sol · Ca/Al</td><td>N libre &lt; 5 ppm · Al/N &gt; 3,5</td><td>A3-2 · A3-3</td><td>Vieillissement · bouchage inclusionnaire</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="carnet-legende">
+          <span class="nuance nuance-done">✅ Fiche finalisée</span>
+          <span class="nuance nuance-exp">🔬 En qualification expérimentale</span>
+          <span class="nuance nuance-todo">⬜ À démarrer</span>
+        </div>
+
       </div>
     </section>
 
+    <!-- DÉVELOPPEMENT NOUVELLES NUANCES -->
     <section id="nouvelles-nuances">
       <div class="section-inner">
         <h2>Développement nouvelles nuances</h2>
-        <p class="lead">Lecture par débouché marché : ce que chaque segment exige aujourd’hui, et où la maîtrise analytique aciérie devient un avantage différenciant.</p>
+        <p class="lead">Lecture par débouché marché — ce que chaque segment exige, ce qu'AM iCARe® couvre aujourd'hui, et où la maîtrise analytique aciérie est déterminante. Le pipeline Cu/C/N construit sur IF Ti/Nb est transférable directement — on alimente l'outil, on ne le reconstruit pas.</p>
 
         <div class="ngo-table-wrapper">
           <table class="ngo-table">
             <thead>
               <tr>
                 <th>Débouché marché</th>
-                <th>Situation actuelle</th>
+                <th>Statut iCARe®</th>
                 <th>Piste de développement</th>
-                <th>Contrainte aciérie</th>
+                <th>Contrainte aciérie Dunkerque</th>
                 <th>Enjeu analytique</th>
               </tr>
             </thead>
             <tbody>
               <tr class="ngo-current">
-                <td><strong>Moteurs traction EV</strong></td>
-                <td>iCARe® Save / Torque / Speed en qualification</td>
-                <td>Montée en robustesse process</td>
-                <td>Cu bas · C/N ultra-bas · propreté inclusionnaire</td>
-                <td>Suivi Cpk Cu, dérive RH, lien W/kg vs chimie brame</td>
+                <td><strong>Moteurs traction EV</strong><br><span style="font-size:0.8em;color:var(--text-soft)">400–1000 Hz · CAGR ~15%/an</span></td>
+                <td>✅ Save · Torque · Speed — 0.20–0.35mm · en qualification Mardyck</td>
+                <td>—</td>
+                <td>Cu &lt; 0.05% · C/N ultra-bas (RH) · propreté inclusionnaire</td>
+                <td>Cpk Cu par coulée · dérive C/N RH · corrélation W/kg vs chimie brame · modèle prédictif non-conformité</td>
               </tr>
               <tr>
-                <td><strong>Haute vitesse / e-aviation</strong></td>
-                <td>Couverture partielle aujourd’hui</td>
-                <td>NGO ultra-mince à terme</td>
-                <td>Cu très bas · ségrégation centrale critique</td>
-                <td>Seuils Cu et propreté sur faibles épaisseurs</td>
+                <td><strong>Moteurs haute vitesse · e-aviation</strong><br><span style="font-size:0.8em;color:var(--text-soft)">&gt; 20 000 tr/min · &gt; 1000 Hz</span></td>
+                <td>⚠️ Speed couvre partiellement (0.35mm) · épaisseurs &lt; 0.20mm non encore produites</td>
+                <td>NGO ultra-mince 0.10–0.20mm — prérequis : laminoir 6-high ANDRITZ Mardyck Phase 2 (2027) · pratique chez POSCO / Nippon Steel</td>
+                <td>Cu &lt; 0.04% · ségrégation centrale rédhibitoire sur épaisseur réduite · propreté inclusionnaire maximale</td>
+                <td>Lien propreté inclusionnaire brame ↔ défauts surface épaisseur ultra-fine · seuil Cu critique abaissé — A3-1 + A3-2 combinés</td>
               </tr>
               <tr>
-                <td><strong>NGO standard industriel</strong></td>
-                <td>Tension structurelle avec hausse ferrailles</td>
-                <td>NGO plus tolérant au Cu</td>
-                <td>Cu et Si à arbitrer</td>
-                <td>Modèle Cu × Si → conformité produit</td>
+                <td><strong>NGO standard — moteurs industriels &amp; électroménager</strong><br><span style="font-size:0.8em;color:var(--text-soft)">Contrainte : ↑ ferrailles → ↑ Cu résiduel · seuil NGO à tenir</span></td>
+                <td>⚠️ Non couvert — iCARe® exige Cu &lt; 0.05% incompatible avec ↑ ferrailles sans maîtrise analytique</td>
+                <td>NGO Cu-tolerant — ↑ Si pour modifier précipitation MnS et limiter nocivité Cu · pratique chez POSCO · levier analytique Cu×Si à quantifier sur données Dunkerque</td>
+                <td>Cu &lt; 0.08% visé · tolérance conditionnée par teneur Si et W/kg cible · seuil à établir par A3-1</td>
+                <td>Modèle Cu×Si → W/kg · régression logistique non-conformité · définition seuil Cu tolérable par grade — levier différenciant décarbonation</td>
               </tr>
               <tr>
-                <td><strong>EV bas carbone</strong></td>
-                <td>Non couvert aujourd’hui</td>
-                <td>Traçabilité carbone + charge évolutive</td>
-                <td>Cu résiduel + empreinte carbone par coulée</td>
-                <td>Jointure production × certificat carbone</td>
+                <td><strong>Clients EV — engagement carbone scope 3</strong><br><span style="font-size:0.8em;color:var(--text-soft)">VW · BMW · Renault · certification RSE</span></td>
+                <td>⚠️ Non couvert — pas de certification carbone sur iCARe® actuel (filière BOF)</td>
+                <td>NGO bas carbone certifié — DRI partiel en charge BOF + traçabilité scope 3 · levier EAF 2029 Dunkerque · pratique chez Voestalpine (DRI/HBI)</td>
+                <td>Transition DRI partiel dès 2027 → Cu résiduel bas · empreinte carbone traçable par coulée · certification tierce requise</td>
+                <td>Traçabilité Cu + carbone par coulée → jointure données production × certificat carbone · base analytique identique iCARe® — on ajoute la dimension scope 3</td>
               </tr>
             </tbody>
           </table>
         </div>
+
+        <p style="margin-top:1.2rem;font-size:0.9rem;color:var(--text-soft);">Les travaux A3-1 (Cu/tramp) et A3-3 (maîtrise C/N) constituent le socle analytique commun à tous ces débouchés. La maîtrise Cu à l'aciérie est le facteur différenciant — là où la concurrence (ThyssenKrupp EAF, Voestalpine DRI) part avec un avantage structurel, la réponse AM passe par la maîtrise analytique dans la contrainte BOF.</p>
+
       </div>
     </section>
 
+    <!-- COMPÉTENCES -->
     <section id="competences" class="section-alt">
       <div class="section-inner">
         <h2>Compétences</h2>
@@ -518,7 +833,7 @@
           <div class="skill-group">
             <h3>Méthodologie projet</h3>
             <ul>
-              <li>A3 / AMF</li>
+              <li>A3 / AMF (8 étapes)</li>
               <li>DMAIC / Six Sigma</li>
               <li>AMDEC inversée</li>
               <li>Ishikawa</li>
@@ -528,45 +843,54 @@
           <div class="skill-group">
             <h3>Outils analytiques</h3>
             <ul>
-              <li>KNIME</li>
-              <li>Orange 3</li>
-              <li>Tests statistiques</li>
-              <li>Python</li>
-              <li>Streamlit</li>
+              <li>KNIME — workflows avancés, intégration Python</li>
+              <li>Orange 3 — signal/image, ML supervisé &amp; non supervisé</li>
+              <li>Tests statistiques (Mann-Whitney, Spearman, Shapiro, Cpk)</li>
+              <li>Python — analyse exploratoire</li>
+              <li>Streamlit — restitution interactive</li>
             </ul>
           </div>
           <div class="skill-group">
             <h3>Domaine sidérurgique</h3>
             <ul>
-              <li>BOF / LF / RH / Coulée continue</li>
-              <li>Métallurgie secondaire et inclusionnaire</li>
-              <li>Nuances IF, NGO, AHSS, emballage</li>
-              <li>Décarbonation et contrainte charge métallique</li>
-              <li>Analyse filière et objectivation économique</li>
+              <li>Process BOF / LF / RH / Coulée continue</li>
+              <li>Métallurgie secondaire &amp; inclusionnaire</li>
+              <li>Nuances IF, aciers électriques NGO (iCARe®)</li>
+              <li>Décarbonation — IGAR, DRI H₂</li>
+              <li>Objectivation économique — analyse filière</li>
             </ul>
           </div>
           <div class="skill-group">
             <h3>Transversal</h3>
             <ul>
-              <li>Conduite de projet</li>
-              <li>Interface terrain / données / décision</li>
-              <li>Anglais professionnel</li>
-              <li>Autonomie en environnement contraint</li>
+              <li>Anglais — interaction avec interlocuteurs internationaux</li>
+              <li>Conduite de projet transversal</li>
+              <li>Interface données process / décisions opérationnelles</li>
+              <li>Autonomie en environnement contraint — livraison en accès données limité</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
       <div class="section-inner contact-inner">
         <h2>Contact</h2>
         <div class="contact-cards">
-          <a href="mailto:[votre.email@outlook.com]" class="contact-card"><span>[votre.email@outlook.com]</span></a>
-          <a href="tel:+33628506924" class="contact-card"><span>06 28 50 69 24</span></a>
+          <a href="mailto:[votre.email@outlook.com]" class="contact-card">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="22" height="22"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            <span>[votre.email@outlook.com]</span>
+          </a>
+          <a href="tel:+33628506924" class="contact-card">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="22" height="22"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            <span>06 28 50 69 24</span>
+          </a>
         </div>
         <p class="contact-note">Disponible pour prise de poste au <strong>1er juillet 2026</strong>.</p>
-        <p class="contact-note" style="margin-top:1rem;">Dossier analytique complet disponible sur demande.</p>
+        <p class="contact-note" style="margin-top:1rem;">
+          Dossier analytique complet disponible sur demande.
+        </p>
       </div>
     </section>
 
@@ -577,6 +901,7 @@
   </footer>
 
   <script>
+    // Smooth scroll pour la navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -585,6 +910,7 @@
       });
     });
 
+    // Highlight nav link active
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav a');
     window.addEventListener('scroll', () => {
