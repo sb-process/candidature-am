@@ -289,6 +289,10 @@
               <span class="axe-label">Leviers</span>
               <p>Cahier des charges ferrailles, règles de séquençage, seuils P, réglages vitesse / surchauffe / EMS.</p>
             </div>
+            <div class="axe-section">
+              <span class="axe-label">Impact EAF-DRI 2029</span>
+              <p><strong>Phase transitoire (2029–2031) :</strong> EAF alimenté en ferrailles sélectionnées — Cu ~0,05–0,10 %, contrainte Cu toujours active. <strong>Phase DRI (2031+) :</strong> montée en charge DRI/HBI (Cu &lt; 0,02 %) → Cu se détend structurellement → révision des seuils fiches nuances à anticiper. Nouveau paramètre de pilotage : <code>source_file_liquide</code> (BOF/EAF).</p>
+            </div>
           </div>
 
           <div class="axe-card">
@@ -311,6 +315,10 @@
               <span class="axe-label">Leviers</span>
               <p>Ajustement Al et Ca, basicité laitier, FeO+MnO, RH et suivi des proxies de propreté.</p>
             </div>
+            <div class="axe-section">
+              <span class="axe-label">Impact EAF-DRI 2029</span>
+              <p><strong>Gangue DRI :</strong> SiO₂ (2–5 %) et Al₂O₃ (0,5–2 %) résiduels modifient le laitier LF → basicité chute si CaO non ajusté → désulfuration dégradée → MnS fins. <strong>H₂ :</strong> HBI humide (stockage maritime Dunkerque) → H 6–10 ppm en sortie EAF vs 2–4 ppm BF-BOF → dégazage RH H prolongé.</p>
+            </div>
           </div>
 
           <div class="axe-card">
@@ -331,6 +339,10 @@
             <div class="axe-section">
               <span class="axe-label">Leviers</span>
               <p>Durée et niveau vide RH, ajout Ti, suivi coulée par coulée, surveillance par campagne.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Impact EAF-DRI 2029</span>
+              <p><strong>N pick-up arc EAF :</strong> N en sortie EAF = 60–100 ppm (vs 20–35 ppm BF-BOF) → RH doit dénitrurer 2 à 3× plus → vide &lt; 0,5 mbar, durée 25–35 min vs 15–20 min. Si N &gt; 80 ppm sur nuance IF : déclassement. <strong>C :</strong> C en sortie EAF = 0,05–0,15 % → décarburation RH plus longue → impact cycle de production.</p>
             </div>
           </div>
 
@@ -353,6 +365,10 @@
               <span class="axe-label">Leviers</span>
               <p>Modèle de bilan thermique, règle de surchauffe adaptée et alerte prédictive MES.</p>
             </div>
+            <div class="axe-section">
+              <span class="axe-label">Impact EAF-DRI 2029</span>
+              <p><strong>Fenêtre thermique EAF :</strong> sortie EAF ~1580–1620 °C (vs 1620–1660 °C BOF) → marge thermique réduite, risque bouchage accru. <strong>Double file liquide :</strong> cohabitation BOF + EAF alimentant la même CC → conflits de séquençage (Cu bas/N élevé EAF vs Cu élevé/N bas BOF) → 2–4 brames de transition à déclasser par changement de file.</p>
+            </div>
           </div>
         </div>
 
@@ -369,8 +385,15 @@
         </details>
 
         <div class="contrainte-box">
-          <h3>Contrainte transverse principale</h3>
-          <p>La décarbonation (↑ taux ferrailles) est une contrainte stratégique donnée. Les A3 qualité doivent accompagner cette transition en trouvant des leviers robustes dans le cadre BOF actuel.</p>
+          <h3>Contrainte transverse principale — intégration EAF-DRI 2029</h3>
+          <p>La décarbonation (↑ taux ferrailles → EAF + import DRI/HBI horizon 2029) est la contrainte stratégique majeure. Son impact se décline sur les 4 axes A3 :</p>
+          <ul style="margin:0.6rem 0 0.4rem 1.2rem; font-size:0.88rem; line-height:1.55;">
+            <li><strong>A3-1 Résiduels :</strong> phase transitoire Cu élevé (ferrailles 2029-2031), puis détente Cu via DRI — nouveau paramètre <em>source_file_liquide</em> (BOF vs EAF).</li>
+            <li><strong>A3-2 Inclusionnaire :</strong> gangue DRI (SiO₂, Al₂O₃) modifie le laitier LF — H élevé depuis HBI humide nécessitant un dégazage renforcé.</li>
+            <li><strong>A3-3 Dégazage RH :</strong> N pick-up arc EAF 60–100 ppm (vs 25–40 BOF) — le RH doit absorber 2 à 3× plus de N, avec un C également plus élevé.</li>
+            <li><strong>A3-4 Thermique :</strong> sortie EAF ~1580–1620 °C (vs 1620–1660 °C BOF) — marge réduite, risque bouchage — double file liquide BOF/EAF créant des conflits de séquençage.</li>
+          </ul>
+          <p style="margin-top:0.4rem;">Les A3 qualité doivent intégrer cette transition en anticipant les nouvelles contraintes dès le cadre BOF actuel.</p>
         </div>
       </div>
     </section>
