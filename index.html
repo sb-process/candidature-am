@@ -32,6 +32,7 @@
       <li><a href="#pilotage">Pilotage</a></li>
       <li><a href="#carnet">Carnet de nuances</a></li>
       <li><a href="#nouvelles-nuances">Nouvelles nuances</a></li>
+      <li><a href="#outil-analytique">Outil analytique</a></li>
       <li><a href="#competences">Compétences</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -534,7 +535,95 @@
       </div>
     </section>
 
-    <section id="competences" class="section-alt">
+    <section id="outil-analytique" class="section-alt">
+      <div class="section-inner">
+        <h2>Outil analytique — prototype Streamlit</h2>
+        <p class="lead">
+          Application interactive de démonstration construite sur deux nuances pilotes.
+          Le principe : un référentiel analytique complet par nuance (variables, seuils, défauts, dérives)
+          couplé à une exploration Cpk sur données réelles uploadées.
+          Le prototype est duplicable à l'ensemble du carnet — la structure est identique, seuls changent
+          les seuils et les variables critiques par nuance.
+        </p>
+
+        <div class="axes-grid">
+
+          <div class="axe-card">
+            <div class="axe-num" style="background:var(--accent);">1</div>
+            <h3>DC06 IF TiNb — BLSR (signal binaire)</h3>
+            <div class="axe-section">
+              <span class="axe-label">Y</span>
+              <p>Signal binaire OK / NOK (BLSR), qualifié via Orange 3 (clustering image + validation terrain).</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Variables critiques</span>
+              <p>Cu, Mn/S (mns), cu_eq_dk, %S, %Sn, %Al, debit_argon, teta_surface_r2, rang_sequence, source_file_liquide.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Grille analytique</span>
+              <p>10 variables avec seuils, rôle métallurgique, impact filière aval. 5 défauts hiérarchisés (T1 → T3). 7 scénarios de dérive avec seuils alerte / escalade.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Exploration Cpk</span>
+              <p>Upload CSV → calcul Cpk bilatéral par variable → identification automatique des variables hors capabilité → priorisation des actions correctives.</p>
+            </div>
+          </div>
+
+          <div class="axe-card">
+            <div class="axe-num" style="background:var(--accent);">2</div>
+            <h3>M400-50A NGO haut Si — W/kg (signal continu)</h3>
+            <div class="axe-section">
+              <span class="axe-label">Y</span>
+              <p>Signal continu W/kg (pertes fer), mesuré par essai Epstein — enjeu direct sur le grade de la bobine.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Variables critiques</span>
+              <p>c_ppm, n_ppm, %Si, %Al, %Cu, %Ti, duree_vide_RH, %S, source_file_liquide.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Grille analytique</span>
+              <p>9 variables avec seuils stricts (Cu &lt; 0,03%, C &lt; 25 ppm, Ti &lt; 50 ppm). 5 défauts dont pertes W/kg (T1) et ségrégation Si (T2). 6 scénarios de dérive incluant mélange grades en séquence.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Exploration Cpk</span>
+              <p>Upload CSV → Cpk continu → corrélation W/kg vs variables chimiques → visualisation des leviers d'amélioration.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="continuation-box">
+          <h3>Duplication sur l'ensemble du carnet</h3>
+          <div class="continuation-steps">
+            <div class="cont-step done">
+              <span class="cont-label">Prototype — réalisé</span>
+              <p>2 nuances pilotes couvrant les deux types de signal Y (binaire BLSR et continu W/kg). 20 grilles analytiques structurées (4 segments, 14 sous-segments). Référentiel décarbonation intégré avec triple seuils BOF / EAF / EAF-DRI.</p>
+            </div>
+            <div class="cont-arrow">&rarr;</div>
+            <div class="cont-step next">
+              <span class="cont-label">Poste — duplication</span>
+              <p>Alimenter chaque nuance avec les données MES réelles de Dunkerque. Même structure, mêmes briques Cpk — on instancie avec les seuils spécifiques de la fiche nuance. L'outil devient le tableau de bord quotidien du Manager Support Process : une grille par nuance, des alertes par dérive, un Cpk par CTQ.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:1.5rem;">
+          <a href="https://sb-process-am-restitution.hf.space" target="_blank" class="dossier-banner" style="display:inline-flex;max-width:520px;">
+            <div class="dossier-banner-left">
+              <span class="dossier-icon">⬡</span>
+              <div>
+                <p class="dossier-title">Accéder à l'outil analytique</p>
+                <p class="dossier-sub">App Streamlit — 20 nuances · 14 sous-segments · exploration Cpk</p>
+              </div>
+            </div>
+            <span class="dossier-cta">Ouvrir →</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="competences">
       <div class="section-inner">
         <h2>Compétences</h2>
         <div class="skills-grid">
