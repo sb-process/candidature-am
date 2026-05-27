@@ -990,3 +990,51 @@ footer {
   .pipeline-step { flex-direction: column; gap: 0.8rem; }
   .step-number { width: 1.8rem; height: 1.8rem; font-size: 0.85rem; }
 }
+
+/* ── Banner outil analytique ── */
+.dossier-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--blue);
+  border-left: 5px solid var(--accent);
+  border-radius: 6px;
+  padding: 1.2rem 1.6rem;
+  text-decoration: none;
+  gap: 1.2rem;
+  transition: background 0.2s;
+}
+.dossier-banner:hover { background: #2a2a2a; }
+
+.dossier-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dossier-icon {
+  font-size: 1.8rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.dossier-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.dossier-sub {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  margin-top: 0.2rem;
+}
+
+.dossier-cta {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
