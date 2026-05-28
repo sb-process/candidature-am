@@ -401,12 +401,21 @@
 
     <section id="pilotage">
       <div class="section-inner">
-        <h2>Pilotage multiprojet</h2>
-        <p class="lead">Classeur de pilotage complet — 55 onglets couvrant les 4 axes A3, 14 sous-segments, 20 nuances, Gantt portefeuille, grille de pilotage, journal d'incidents, fiches d'essai et workflows KNIME. Navigation par onglets en bas du classeur.</p>
-        <p style="font-size:0.85rem; color:var(--text-soft); margin-top:0.5rem;">Utilisez le bouton <strong>plein écran</strong> en bas à droite du classeur pour une lecture confortable.</p>
-        <div style="margin-top:1.5rem; border:1px solid var(--gray-border); border-radius:var(--radius); overflow:hidden;">
-          <iframe width="100%" height="600" frameborder="0" scrolling="yes" src="https://synpase2026-my.sharepoint.com/personal/sergebuasa_synpase2026_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc={bb20c971-be06-45a2-abdd-e067dabb7f3f}&action=embedview&ActiveCell='INDEX'!A1&wdHideGridlines=True&wdHideHeaders=True&wdInConfigurator=True&wdInConfigurator=True&edaebf=rslc0"></iframe>
+        <h2>Pilotage support process métal liquide</h2>
+        <p class="lead">Comment je déploie concrètement — 60 onglets du dashboard direction aux fiches nuances individuelles. 4 niveaux hiérarchiques, 4 A3, 14 sous-segments, 20 nuances, Gantt 61 semaines, grille de pilotage, workflows KNIME.</p>
+        <p style="font-size:0.85rem; color:var(--text-soft); margin-top:0.5rem;">Navigation par onglets en bas du classeur. Document en consultation uniquement.</p>
+        <div style="margin-top:1.5rem; position:relative; border:1px solid var(--gray-border); border-radius:var(--radius); overflow:hidden;">
+          <button id="btn-fullscreen" onclick="document.getElementById('pilotage-frame').requestFullscreen()" style="position:absolute; top:8px; right:8px; z-index:10; background:var(--blue); color:var(--white); border:none; border-radius:4px; padding:6px 14px; font-size:0.8rem; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:6px; opacity:0.85; transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+            Plein écran
+          </button>
+          <iframe id="pilotage-frame"
+            width="100%" height="600" frameborder="0" scrolling="yes"
+            sandbox="allow-scripts allow-same-origin"
+            src="https://synpase2026-my.sharepoint.com/personal/sergebuasa_synpase2026_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc={bb20c971-be06-45a2-abdd-e067dabb7f3f}&action=embedview&ActiveCell='INDEX'!A1&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=False&wdAllowInteractivity=False&wdPrint=False"
+          ></iframe>
         </div>
+      </div>
     </section>
 
     <section id="carnet" class="section-alt">
@@ -699,7 +708,7 @@
       <div class="section-inner contact-inner">
         <h2>Contact</h2>
         <div class="contact-cards">
-          <a href="mailto:[votre.email@outlook.com]" class="contact-card"><span>[votre.email@outlook.com]</span></a>
+          <a href="mailto:sergebuasa@gmail.com" class="contact-card"><span>sergebuasa@gmail.com</span></a>
           <a href="tel:+33628506924" class="contact-card"><span>06 28 50 69 24</span></a>
         </div>
         <p class="contact-note">Disponible pour prise de poste au <strong>1er juillet 2026</strong>.</p>
