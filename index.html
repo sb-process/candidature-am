@@ -402,7 +402,7 @@
     <section id="pilotage">
       <div class="section-inner">
         <h2>Pilotage support process métal liquide</h2>
-        <p class="lead">Comment je déploie concrètement — 60 onglets du dashboard direction aux fiches nuances individuelles. 4 niveaux hiérarchiques, 4 A3, 14 sous-segments, 20 nuances, Gantt 61 semaines, grille de pilotage, workflows KNIME.</p>
+        <p class="lead">Comment je déploie concrètement — 63 onglets du dashboard direction aux fiches nuances individuelles. 4 niveaux hiérarchiques, 4 A3, 14 sous-segments, 20 nuances, Gantt 61 semaines, grille de pilotage, workflows KNIME.</p>
         <p style="font-size:0.85rem; color:var(--text-soft); margin-top:0.5rem;">Navigation par onglets en bas du classeur. Document en consultation uniquement.</p>
         <div style="margin-top:1.5rem; position:relative; border:1px solid var(--gray-border); border-radius:var(--radius); overflow:hidden;">
           <button id="btn-fullscreen" onclick="document.getElementById('pilotage-frame').requestFullscreen()" style="position:absolute; top:8px; right:8px; z-index:10; background:var(--blue); color:var(--white); border:none; border-radius:4px; padding:6px 14px; font-size:0.8rem; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:6px; opacity:0.85; transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">
@@ -618,72 +618,72 @@
 
     <section id="outil-analytique" class="section-alt">
       <div class="section-inner">
-        <h2>Outil analytique — prototype Streamlit</h2>
+        <h2>Méthodologie de pilotage qualité — app Streamlit</h2>
         <p class="lead">
-          Application interactive de démonstration construite sur deux nuances pilotes.
-          Le principe : un référentiel analytique complet par nuance (variables, seuils, défauts, dérives)
-          couplé à une exploration Cpk sur données réelles uploadées.
-          Le prototype est duplicable à l'ensemble du carnet — la structure est identique, seuls changent
-          les seuils et les variables critiques par nuance.
+          Application interactive présentant la <strong>méthodologie concrète</strong> de pilotage qualité
+          proposée pour le poste. Trois vues complémentaires, illustrées sur données réelles
+          (1 820 bobines, 2 ans). Les seuils sont calculés dynamiquement depuis les données demo.
         </p>
 
         <div class="axes-grid">
 
           <div class="axe-card">
             <div class="axe-num" style="background:var(--accent);">1</div>
-            <h3>DC06 IF TiNb — BLSR (signal binaire)</h3>
+            <h3>Référentiel</h3>
             <div class="axe-section">
-              <span class="axe-label">Y</span>
-              <p>Signal binaire OK / NOK (BLSR), qualifié via Orange 3 (clustering image + validation terrain).</p>
+              <span class="axe-label">Quoi</span>
+              <p>Structurer le territoire : 4 SEG → 14 SSEG → 20 nuances → 30 défauts. Catalogue complet par nuance avec variables critiques, seuils, mécanismes dominants.</p>
             </div>
             <div class="axe-section">
-              <span class="axe-label">Variables critiques</span>
-              <p>Cu, Mn/S (mns), cu_eq_dk, %S, %Sn, %Al, debit_argon, teta_surface_r2, rang_sequence, source_file_liquide.</p>
-            </div>
-            <div class="axe-section">
-              <span class="axe-label">Grille analytique</span>
-              <p>10 variables avec seuils, rôle métallurgique, impact filière aval. 5 défauts hiérarchisés (T1 → T3). 7 scénarios de dérive avec seuils alerte / escalade.</p>
-            </div>
-            <div class="axe-section">
-              <span class="axe-label">Exploration Cpk</span>
-              <p>Upload CSV → calcul Cpk bilatéral par variable → identification automatique des variables hors capabilité → priorisation des actions correctives.</p>
+              <span class="axe-label">Lien PILOTAGE_COMPLET</span>
+              <p>Chaque fiche SSEG reprend le contenu des 14 onglets du classeur : défauts, KPIs C/C, cofacteurs, workflows KNIME dédiés.</p>
             </div>
           </div>
 
           <div class="axe-card">
             <div class="axe-num" style="background:var(--accent);">2</div>
-            <h3>M400-50A NGO haut Si — W/kg (signal continu)</h3>
+            <h3>Études RCA</h3>
             <div class="axe-section">
-              <span class="axe-label">Y</span>
-              <p>Signal continu W/kg (pertes fer), mesuré par essai Epstein — enjeu direct sur le grade de la bobine.</p>
+              <span class="axe-label">Quoi</span>
+              <p>Calibrer les seuils empiriques sur données filières (temps long, 2 ans). Deux études complètes : DC06 / BLSR (949 bobines, Y binaire) et M400-50A / W_kg (871 bobines, Y continu).</p>
             </div>
             <div class="axe-section">
-              <span class="axe-label">Variables critiques</span>
-              <p>c_ppm, n_ppm, %Si, %Al, %Cu, %Ti, duree_vide_RH, %S, source_file_liquide.</p>
+              <span class="axe-label">Pipeline</span>
+              <p>Exploration → Sélection variables → Modélisation → Ishikawa → AMDEC → Seuils calibrés. Les seuils alimentent le pilotage continu.</p>
+            </div>
+          </div>
+
+          <div class="axe-card">
+            <div class="axe-num" style="background:var(--accent);">3</div>
+            <h3>Pilotage continu</h3>
+            <div class="axe-section">
+              <span class="axe-label">Quoi</span>
+              <p>Opérer au quotidien, coulée par coulée. Tableau de bord opérationnel avec voyants par nuance (5-6 indicateurs, seuils OK/alerte/action), lisible par un chef de poste en 30 secondes.</p>
             </div>
             <div class="axe-section">
-              <span class="axe-label">Grille analytique</span>
-              <p>9 variables avec seuils stricts (Cu &lt; 0,03%, C &lt; 25 ppm, Ti &lt; 50 ppm). 5 défauts dont pertes W/kg (T1) et ségrégation Si (T2). 6 scénarios de dérive incluant mélange grades en séquence.</p>
-            </div>
-            <div class="axe-section">
-              <span class="axe-label">Exploration Cpk</span>
-              <p>Upload CSV → Cpk continu → corrélation W/kg vs variables chimiques → visualisation des leviers d'amélioration.</p>
+              <span class="axe-label">Contenu</span>
+              <p>Cpk process vs norme EN · seuils empiriques dynamiques (calculés depuis les demos) · dérives anticipées avec ascendance nuance → SSEG → SEG · scénarios d'escalade.</p>
             </div>
           </div>
 
         </div>
 
         <div class="continuation-box">
-          <h3>Duplication sur l'ensemble du carnet</h3>
+          <h3>Articulation avec le PILOTAGE_COMPLET</h3>
           <div class="continuation-steps">
             <div class="cont-step done">
-              <span class="cont-label">Prototype — réalisé</span>
-              <p>2 nuances pilotes couvrant les deux types de signal Y (binaire BLSR et continu W/kg). 20 grilles analytiques structurées (4 segments, 14 sous-segments). Référentiel décarbonation intégré avec triple seuils BOF / EAF / EAF-DRI.</p>
+              <span class="cont-label">PILOTAGE_COMPLET (63 onglets)</span>
+              <p>Le plan de déploiement détaillé : 14 fiches SSEG avec défauts, KPIs, workflows, scénarios terrain, phases d'actions. C'est le cahier des charges opérationnel.</p>
+            </div>
+            <div class="cont-arrow">&rarr;</div>
+            <div class="cont-step done">
+              <span class="cont-label">App Streamlit (méthodologie)</span>
+              <p>La méthodologie interactive : référentiel structuré, études RCA sur données réelles, tableau de bord opérationnel avec seuils dynamiques. C'est la preuve de faisabilité.</p>
             </div>
             <div class="cont-arrow">&rarr;</div>
             <div class="cont-step next">
-              <span class="cont-label">Poste — duplication</span>
-              <p>Alimenter chaque nuance avec les données MES réelles de Dunkerque. Même structure, mêmes briques Cpk — on instancie avec les seuils spécifiques de la fiche nuance. L'outil devient le tableau de bord quotidien du Manager Support Process : une grille par nuance, des alertes par dérive, un Cpk par CTQ.</p>
+              <span class="cont-label">En poste — déploiement</span>
+              <p>Alimenter avec les données MES/OES de production. Les WF KNIME/Python calculent les Cpk C/C, les seuils se recalibrent à chaque nouvelle étude RCA. L'outil s'adapte à la stack site (BO, Power BI, KNIME Server).</p>
             </div>
           </div>
         </div>
@@ -693,8 +693,8 @@
             <div class="dossier-banner-left">
               <span class="dossier-icon">⬡</span>
               <div>
-                <p class="dossier-title">Accéder à l'outil analytique</p>
-                <p class="dossier-sub">App Streamlit — 20 nuances · 14 sous-segments · exploration Cpk</p>
+                <p class="dossier-title">Accéder à la méthodologie interactive</p>
+                <p class="dossier-sub">App Streamlit — 3 vues · 20 nuances · seuils dynamiques · tableau de bord opérationnel</p>
               </div>
             </div>
             <span class="dossier-cta">Ouvrir →</span>
@@ -758,7 +758,7 @@
           <a href="mailto:sergebuasa@gmail.com" class="contact-card"><span>sergebuasa@gmail.com</span></a>
           <a href="tel:+33628506924" class="contact-card"><span>06 28 50 69 24</span></a>
         </div>
-        <p class="contact-note">Disponible pour prise de poste au <strong>1er juillet 2026</strong>.</p>
+        <p class="contact-note">Disponible pour prise de poste à la <strong>rentrée 2026 (septembre)</strong>.</p>
         <p class="contact-note" style="margin-top:1rem;">Dossier analytique complet disponible sur demande.</p>
       </div>
     </section>
