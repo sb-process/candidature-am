@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Serge Buasa — Case Study: Steelworks Quality Control</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <p class="header-tag">Industrial Case Study</p>
+        <h1>Serge Buasa</h1>
+        <p class="header-subtitle">Steelworks process quality control</p>
+        <p class="header-location">Integrated BOF steelworks context, multi-segment — simulated data</p>
+      </div>
+      <div class="header-right">
+        <div class="lang-switch">
+          <a href="index.html" class="lang-link">FR</a>
+          <span class="lang-active">EN</span>
+        </div>
+        <a href="cv_serge_buasa.pdf" class="btn-download" download>Download CV</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#profil">Profile</a></li>
+      <li><a href="#resume">Executive Summary</a></li>
+      <li><a href="#vision">Quality Axes</a></li>
+      <li><a href="#pilotage">Monitoring</a></li>
+      <li><a href="#carnet">Grade Book</a></li>
+      <li><a href="#nouvelles-nuances">New Grades</a></li>
+      <li><a href="#outil-analytique">Analytical Tool</a></li>
+      <li><a href="#competences">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="profil">
+      <div class="section-inner">
+        <h2>Profile</h2>
+        <p class="lead">Apprenticeship completed in March 2026 at an integrated steelworks (BOF), with direct exposure to production data and steelmaking quality challenges.</p>
+        <p class="lead">Work focused on process quality analysis, structuring value-chain databases and statistical objectification of critical variables on real cases.</p>
+        <p class="lead">Objective in this role: extend the A3/AMF foundation transmitted by process experts with a targeted analytical layer, serving steel chemistry, inclusion control and thermal control.</p>
+
+        <div class="imbrication-wrapper">
+          <h3 class="imbrication-title">Data-driven approach: layered reinforcement</h3>
+          <p class="imbrication-subtitle">Applied to the 3 axes of the role — steel chemistry · inclusion control · thermal control</p>
+
+          <div class="layer layer-socle">
+            <div class="layer-header">
+              <span class="layer-tag">Foundation — A3 / Process approach</span>
+            </div>
+            <p class="layer-desc">Defecto · descriptive analysis · indicator tracking</p>
+
+            <div class="layer layer-visu">
+              <div class="layer-header">
+                <span class="layer-tag layer-tag-2">+ Automated visualizations & statistical tests</span>
+              </div>
+              <p class="layer-desc">Exhaustive coverage of candidate variables — anti-streetlight bias approach<br>
+              For each variable: dedicated visualization + appropriate statistical test<br>
+              <span class="layer-tools">Mann-Whitney · Spearman · Shapiro · Cpk — KNIME · Python</span></p>
+
+              <div class="layer layer-ml">
+                <div class="layer-header">
+                  <span class="layer-tag layer-tag-4">+ Supervised models</span>
+                </div>
+                <p class="layer-desc">Signal/image classification · prediction · multi-variable RCA<br>
+                <span class="layer-tools">Orange 3 · Scikit-Learn · KNIME ML</span></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="resume" class="section-alt">
+      <div class="section-inner">
+        <h2>Executive Summary</h2>
+        <div class="result-box">
+          <h3>What this dossier demonstrates</h3>
+          <ul>
+            <li>Ability to structure a real A3 case on a steelmaking quality issue.</li>
+            <li>Evidence of the link between liquid steel chemistry and downstream defects.</li>
+            <li>Construction of a coil &rarr; slab &rarr; heat value-chain database suitable for RCA.</li>
+            <li>Use of KNIME, Orange 3 and Python as process decision-support tools.</li>
+            <li>Projection of the role across 4 axes: residual elements / inclusion control / RH degassing / thermal control.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section cas-etude supprimee — copie confidentielle dans candidature_arcelormittal/cas_etude_blsr_section_confidentielle.html -->
+    <!-- FIN CAS-ETUDE SUPPRIME -->
+
+    <section id="vision">
+      <div class="section-inner">
+        <h2>Steelworks quality axes</h2>
+        <p class="lead">4 quality monitoring axes structured around a common cross-cutting constraint: the BOF metallic charge composition.</p>
+
+        <div class="axes-grid">
+          <div class="axe-card">
+            <div class="axe-num">A3-1</div>
+            <h3>Residual elements &amp; segregation control</h3>
+            <div class="axe-section">
+              <span class="axe-label">Issue</span>
+              <p>Cu and tramp elements cannot be removed in the BOF — direct link to decarbonization and product quality.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Monitored variables</span>
+              <ul class="axe-vars">
+                <li>Cu · As · Ni · Sn</li>
+                <li>Residual P</li>
+                <li>CC centerline segregation</li>
+                <li>Free B on press hardening grades</li>
+              </ul>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Levers</span>
+              <p>Scrap specifications, sequencing rules, P thresholds, speed / superheat / EMS settings.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">EAF-DRI 2029 impact</span>
+              <p><strong>Transitional phase (2029–2031):</strong> EAF fed with selected scrap — Cu ~0.05–0.10%, Cu constraint still active. <strong>DRI phase (2031+):</strong> DRI/HBI ramp-up (Cu &lt; 0.02%) &rarr; Cu structurally relaxed &rarr; grade sheet threshold revision to be anticipated. New monitoring parameter: <code>source_file_liquide</code> (BOF/EAF).</p>
+            </div>
+          </div>
+
+          <div class="axe-card">
+            <div class="axe-num">A3-2</div>
+            <h3>Inclusion control &amp; dissolved H</h3>
+            <div class="axe-section">
+              <span class="axe-label">Issue</span>
+              <p>Chemical cleanliness of liquid steel, casting incidents and surface defects.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Monitored variables</span>
+              <ul class="axe-vars">
+                <li>[Al]sol</li>
+                <li>Ca/Al</li>
+                <li>Nozzle clogging</li>
+                <li>Dissolved H</li>
+              </ul>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Levers</span>
+              <p>Al and Ca adjustment, slag basicity, FeO+MnO, RH degassing and cleanliness proxy monitoring.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">EAF-DRI 2029 impact</span>
+              <p><strong>DRI gangue:</strong> residual SiO&#8322; (2–5%) and Al&#8322;O&#8323; (0.5–2%) modify LF slag &rarr; basicity drops if CaO not adjusted &rarr; degraded desulfurization &rarr; fine MnS. <strong>H&#8322;:</strong> wet HBI (maritime site storage) &rarr; H 6–10 ppm at EAF exit vs 2–4 ppm BF-BOF &rarr; extended RH H degassing.</p>
+            </div>
+          </div>
+
+          <div class="axe-card">
+            <div class="axe-num">A3-3</div>
+            <h3>C/N control — RH degassing</h3>
+            <div class="axe-section">
+              <span class="axe-label">Issue</span>
+              <p>Same RH lever, but different consequences depending on the product segment.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Monitored variables</span>
+              <ul class="axe-vars">
+                <li>NGO: ultra-low C and N</li>
+                <li>IF: free N, Ti/N</li>
+                <li>Packaging: free N, Al/N</li>
+              </ul>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Levers</span>
+              <p>RH vacuum duration and level, Ti addition, heat-by-heat tracking, campaign-level monitoring.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">EAF-DRI 2029 impact</span>
+              <p><strong>N pick-up from EAF arc:</strong> N at EAF exit = 60–100 ppm (vs 20–35 ppm BF-BOF) &rarr; RH must denitrify 2 to 3x more &rarr; vacuum &lt; 0.5 mbar, duration 25–35 min vs 15–20 min. If N &gt; 80 ppm on IF grade: downgrading. <strong>C:</strong> C at EAF exit = 0.05–0.15% &rarr; longer RH decarburization &rarr; production cycle impact.</p>
+            </div>
+          </div>
+
+          <div class="axe-card">
+            <div class="axe-num">A3-4</div>
+            <h3>Sequence thermal control</h3>
+            <div class="axe-section">
+              <span class="axe-label">Issue</span>
+              <p>Thermal drift on long sequences, with effects on clogging or segregation.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Monitored variables</span>
+              <ul class="axe-vars">
+                <li>Ladle temperature</li>
+                <li>Duration between treatments and casting</li>
+                <li>Position in the sequence</li>
+              </ul>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Levers</span>
+              <p>Heat balance model, adapted superheat rule and MES predictive alert.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">EAF-DRI 2029 impact</span>
+              <p><strong>EAF thermal window:</strong> EAF exit ~1580–1620 °C (vs 1620–1660 °C BOF) &rarr; reduced thermal margin, increased clogging risk. <strong>Dual liquid feed:</strong> BOF + EAF cohabitation feeding the same CC &rarr; sequencing conflicts (low Cu/high N EAF vs high Cu/low N BOF) &rarr; 2–4 transition slabs to downgrade per feed changeover.</p>
+            </div>
+          </div>
+        </div>
+
+        <details class="result-box" style="margin-top:1.5rem;">
+          <summary><strong>View criticality tables and supervision tools detail</strong></summary>
+          <div style="margin-top:1rem;">
+            <p>Detailed tables by segment and KNIME/Python workflows can be provided as a technical appendix or presented during the interview.</p>
+            <ul>
+              <li>Criticalities by segment: IF, NGO, AHSS, Packaging</li>
+              <li>Supervision workflows: residual elements, inclusion, RH, thermal</li>
+              <li>Per-heat alerts and Rule Engine logic by grade</li>
+            </ul>
+          </div>
+        </details>
+
+        <div class="contrainte-box">
+          <h3>Main cross-cutting constraint — EAF-DRI 2029 integration</h3>
+          <p>Decarbonization (higher scrap rate &rarr; EAF + DRI/HBI import by 2029) is the major strategic constraint. Its impact spans all 4 A3 axes:</p>
+          <ul style="margin:0.6rem 0 0.4rem 1.2rem; font-size:0.88rem; line-height:1.55;">
+            <li><strong>A3-1 Residual elements:</strong> transitional high-Cu phase (scrap 2029-2031), then Cu relaxation via DRI — new parameter <em>source_file_liquide</em> (BOF vs EAF).</li>
+            <li><strong>A3-2 Inclusion control:</strong> DRI gangue (SiO&#8322;, Al&#8322;O&#8323;) modifies LF slag — high H from wet HBI requiring enhanced degassing.</li>
+            <li><strong>A3-3 RH degassing:</strong> N pick-up from EAF arc 60–100 ppm (vs 25–40 BOF) — the RH must absorb 2 to 3x more N, with C also higher.</li>
+            <li><strong>A3-4 Thermal:</strong> EAF exit ~1580–1620 °C (vs 1620–1660 °C BOF) — reduced margin, clogging risk — dual BOF/EAF liquid feed creating sequencing conflicts.</li>
+          </ul>
+          <p style="margin-top:0.4rem;">The A3 quality projects must integrate this transition by anticipating new constraints from within the current BOF framework.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pilotage">
+      <div class="section-inner">
+        <h2>Liquid metal process support monitoring</h2>
+        <p class="lead">Concrete deployment — 65 tabs from the management dashboard to individual grade sheets. 4 hierarchical levels, 4 A3 projects, 14 sub-segments, 20 type grades, monitoring grid, KNIME workflows.</p>
+
+        <div class="pilot-nav">
+          <a href="#pilot-dashboard">Dashboard</a>
+          <a href="#pilot-grille">Monitoring Grid</a>
+          <a href="#pilot-segments">Segment Sheets</a>
+          <a href="#pilot-sseg">Sub-Segment Sheets</a>
+          <a href="#pilot-registre">Grade Register</a>
+          <a href="#pilot-defauts">Defect Matrix</a>
+          <a href="#pilot-classeur">Complete Workbook</a>
+        </div>
+
+        <!-- ═══ DASHBOARD ═══ -->
+        <div id="pilot-dashboard" class="pilot-subsection" style="border-top:none; padding-top:0; margin-top:1.5rem;">
+          <h3>Management dashboard</h3>
+          <p>Summary view: 4 cross-cutting A3 projects and 4 product segments.</p>
+
+          <h4 style="font-size:0.82rem; font-weight:700; color:var(--accent-dark); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.6rem;">4 cross-cutting A3 axes</h4>
+          <div class="dash-grid">
+            <div class="dash-tile">
+              <h4>A3-1</h4>
+              <p>Cu / Tramp Elements</p>
+              <p style="font-size:0.72rem;">IF, NGO, AHSS, Pkg.</p>
+              <span class="dash-status status-phase0">Phase 0</span>
+            </div>
+            <div class="dash-tile">
+              <h4>A3-2</h4>
+              <p>Inclusion Control</p>
+              <p style="font-size:0.72rem;">LF, RH, Continuous casting</p>
+              <span class="dash-status status-phase0">Phase 0</span>
+            </div>
+            <div class="dash-tile">
+              <h4>A3-3</h4>
+              <p>RH Degassing C/N/H</p>
+              <p style="font-size:0.72rem;">IF, NGO, BH, TRIP, Pkg.</p>
+              <span class="dash-status status-phase0">Phase 0</span>
+            </div>
+            <div class="dash-tile">
+              <h4>A3-4</h4>
+              <p>Sequence Thermal Control</p>
+              <p style="font-size:0.72rem;">Cross-cutting all segments</p>
+              <span class="dash-status status-phase0">Phase 0</span>
+            </div>
+          </div>
+
+          <h4 style="font-size:0.82rem; font-weight:700; color:var(--accent-dark); text-transform:uppercase; letter-spacing:0.06em; margin:1.2rem 0 0.6rem;">4 product segments</h4>
+          <div class="dash-grid">
+            <div class="dash-tile" style="border-top-color:#E2661A;">
+              <h4>IF</h4>
+              <p>Automotive deep drawing</p>
+              <p style="font-size:0.72rem;">6 SSEG · DC06, DC05, DC04, DC03, BH220, H220YD</p>
+            </div>
+            <div class="dash-tile" style="border-top-color:#C04E0E;">
+              <h4>NGO</h4>
+              <p>Electrical steels</p>
+              <p style="font-size:0.72rem;">2 SSEG · M400-50A, NGO Si mod., M600-50</p>
+            </div>
+            <div class="dash-tile" style="border-top-color:#1A1A1A;">
+              <h4>AHSS</h4>
+              <p>Advanced high strength</p>
+              <p style="font-size:0.72rem;">4 SSEG · HSLA 420, PHS 22MnB5, TRIP780, AHSS 3G</p>
+            </div>
+            <div class="dash-tile" style="border-top-color:#4A4A4A;">
+              <h4>Packaging</h4>
+              <p>Tinplate / TFS</p>
+              <p style="font-size:0.72rem;">3 SSEG · Tinplate MR, DR8, TFS low C</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ GRILLE DE PILOTAGE ═══ -->
+        <div id="pilot-grille" class="pilot-subsection">
+          <h3>Monitoring grid — 4 levels</h3>
+          <p>Indicators monitored by hierarchical level, from cross-cutting secondary metallurgy to SSEG sheets.</p>
+
+          <div style="overflow-x:auto;">
+            <table class="grille-table">
+              <thead>
+                <tr><th>Indicator</th><th>Threshold</th><th>Frequency</th><th>Source</th><th>A3</th></tr>
+              </thead>
+              <tbody>
+                <tr class="grille-niveau"><td colspan="5">LEVEL 1a — CROSS-CUTTING LF / RH / CC</td></tr>
+                <tr><td>Ca/Al ratio</td><td>&gt; 1.5</td><td>Heat/heat</td><td>LF lab</td><td>A3-2</td></tr>
+                <tr><td>LF slag basicity</td><td>&gt; 2.5</td><td>Heat/heat</td><td>LF lab</td><td>A3-2</td></tr>
+                <tr><td>Total O LECO (ppm)</td><td>&lt; 20 ppm</td><td>On demand</td><td>Lab</td><td>A3-2</td></tr>
+                <tr><td>C at RH exit (ppm)</td><td>Grade-dependent</td><td>H/H</td><td>OES RH / MES</td><td>A3-3</td></tr>
+                <tr><td>N at RH exit (ppm)</td><td>Grade-dependent</td><td>H/H</td><td>OES RH / MES</td><td>A3-3</td></tr>
+                <tr><td>Ladle departure T (°C)</td><td>Grade-dependent</td><td>H/H</td><td>Pyrometry MES</td><td>A3-4</td></tr>
+                <tr><td>Superheat (°C)</td><td>Grade-dependent</td><td>H/H</td><td>MES</td><td>A3-4</td></tr>
+                <tr><td>Nozzle clogging</td><td>0/sequence</td><td>Event-driven</td><td>MES incidents</td><td>A3-2</td></tr>
+                <tr><td>RH vacuum duration (min)</td><td>&ge; grade threshold</td><td>H/H</td><td>MES RH</td><td>A3-3</td></tr>
+
+                <tr class="grille-niveau"><td colspan="5">LEVEL 1b — CROSS-CUTTING DECARBONIZATION</td></tr>
+                <tr><td>Estimated Cu by scrap category</td><td>Category-dependent</td><td>Reception</td><td>Purchasing</td><td>A3-1</td></tr>
+                <tr><td>BOF scrap rate / heat</td><td>Grade-dependent</td><td>H/H</td><td>MES BOF</td><td>A3-1</td></tr>
+                <tr><td>Cu trend vs % scrap</td><td>Drift &gt; X ppm</td><td>Calculated</td><td>WF02</td><td>A3-1</td></tr>
+                <tr><td>Residual Sn (%)</td><td>&lt; 0.020%</td><td>H/H</td><td>OES melt shop</td><td>A3-1</td></tr>
+                <tr><td>Residual Ni (%)</td><td>&lt; 0.100%</td><td>H/H</td><td>OES melt shop</td><td>A3-1</td></tr>
+
+                <tr class="grille-niveau"><td colspan="5">LEVEL 2 — NGO SEGMENT</td></tr>
+                <tr><td>C at RH exit (ppm)</td><td>high Si &lt; 20 · NGO Si mod. &lt; 20 · M600 &lt; 25</td><td>H/H</td><td>OES RH</td><td>A3-3</td></tr>
+                <tr><td>N at RH exit (ppm)</td><td>high Si &lt; 25 · NGO Si mod. &lt; 25 · M600 &lt; 30</td><td>H/H</td><td>OES RH</td><td>A3-3</td></tr>
+                <tr><td>Ladle Cu (%)</td><td>high Si &lt; 0.045 · NGO Si mod. &lt; 0.055</td><td>H/H</td><td>OES</td><td>A3-1</td></tr>
+                <tr><td>Si (%)</td><td>high Si 2.90–3.30 · NGO Si mod. 0.50–1.50</td><td>H/H</td><td>OES</td><td>—</td></tr>
+
+                <tr class="grille-niveau"><td colspan="5">LEVEL 2 — PACKAGING SEGMENT</td></tr>
+                <tr><td>Ladle Cu (%)</td><td>&lt; 0.075</td><td>H/H</td><td>OES</td><td>A3-1</td></tr>
+                <tr><td>Total N (ppm)</td><td>&lt; 40</td><td>H/H</td><td>OES</td><td>A3-3</td></tr>
+                <tr><td>Free N (ppm)</td><td>&lt; 8</td><td>H/H</td><td>Calculated</td><td>A3-3</td></tr>
+                <tr><td>Al/N ratio</td><td>&gt; 3.5</td><td>H/H</td><td>Calculated</td><td>A3-3</td></tr>
+                <tr><td>C (ppm)</td><td>&lt; 40</td><td>H/H</td><td>OES</td><td>A3-3</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ═══ FICHES SEGMENT ═══ -->
+        <div id="pilot-segments" class="pilot-subsection">
+          <h3>Segment Sheets — NGO &amp; Packaging</h3>
+          <p>Thresholds, cofactors and defects for the 2 segments with demo data.</p>
+
+          <div class="seg-fiche">
+            <div class="seg-fiche-header seg-ngo">NGO — Electrical Steels EV / NGO Si mod. (EN 10106)</div>
+            <div class="seg-fiche-body">
+              <h4>Key thresholds</h4>
+              <table class="grille-table">
+                <thead><tr><th>Indicator</th><th>NGO high Si</th><th>NGO Si mod.</th><th>M600-50</th></tr></thead>
+                <tbody>
+                  <tr><td>C at RH exit (ppm)</td><td>&lt; 20</td><td>&lt; 20</td><td>&lt; 25</td></tr>
+                  <tr><td>N at RH exit (ppm)</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 30</td></tr>
+                  <tr><td>Ladle Cu (%)</td><td>&lt; 0.045</td><td>&lt; 0.055</td><td>&lt; 0.055</td></tr>
+                  <tr><td>Si (%)</td><td>2.90–3.30</td><td>0.50–1.50</td><td>0.50–1.50</td></tr>
+                  <tr><td>Free N (ppm)</td><td>&lt; 5</td><td>&lt; 5</td><td>&lt; 8</td></tr>
+                </tbody>
+              </table>
+              <h4>Cofactors</h4>
+              <ul style="list-style:disc; margin-left:1.2rem; font-size:0.84rem; color:var(--text-soft);">
+                <li><strong>Residual N + AlN</strong> — Free N &gt; 5 ppm &rarr; AlN precipitation &lt; 0.5 &mu;m &rarr; W/kg degradation (WF03)</li>
+                <li><strong>Cu + high Si</strong> — Cu + high Si synergy on embrittlement (WF02)</li>
+                <li><strong>Insufficient RH vacuum</strong> — vacuum duration &lt; threshold &rarr; C/N out of spec (WF03)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="seg-fiche">
+            <div class="seg-fiche-header seg-emb">Packaging — Tinplate / TFS low C (EN 10202 / EN 10203)</div>
+            <div class="seg-fiche-body">
+              <h4>Key thresholds</h4>
+              <table class="grille-table">
+                <thead><tr><th>Indicator</th><th>Tinplate</th><th>TFS low C</th></tr></thead>
+                <tbody>
+                  <tr><td>Ladle Cu (%)</td><td>&lt; 0.075</td><td>&lt; 0.075</td></tr>
+                  <tr><td>Total N (ppm)</td><td>&lt; 40</td><td>&lt; 40</td></tr>
+                  <tr><td>Free N (ppm)</td><td>&lt; 8</td><td>&lt; 8</td></tr>
+                  <tr><td>Al/N ratio</td><td>&gt; 3.5</td><td>&gt; 3.5</td></tr>
+                  <tr><td>C (ppm)</td><td>&lt; 40</td><td>&lt; 40</td></tr>
+                  <tr><td>Ca/Al ratio</td><td>0.10–0.14</td><td>0.10–0.14</td></tr>
+                </tbody>
+              </table>
+              <h4>Cofactors</h4>
+              <ul style="list-style:disc; margin-left:1.2rem; font-size:0.84rem; color:var(--text-soft);">
+                <li><strong>Free N &rarr; strain aging</strong> — N not fixed by Al &rarr; embrittlement during storage (WF01)</li>
+                <li><strong>Synergistic Cu + free N</strong> — Free N amplifies Cu embrittlement (WF01/WF02)</li>
+                <li><strong>Strict Cu limit</strong> — food contact &rarr; Cu &lt; 0.075% mandatory (WF02)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ FICHES SOUS-SEGMENT ═══ -->
+        <div id="pilot-sseg" class="pilot-subsection">
+          <h3>Sub-Segment Sheets — NGO high Si &amp; Packaging Tinplate</h3>
+          <p>Specific problem, SSEG thresholds and A3 approach for the 2 sub-segments with demo data.</p>
+
+          <div class="sseg-fiche" style="border-left-color:#C04E0E;">
+            <h4>SSEG_NGO_highSi — M400-50A · Residual N + AlN &rarr; W/kg</h4>
+            <p class="sseg-meta">NGO high Si (Si 2.90–3.30%) for EV motors — dominant cofactor: residual N + AlN precipitation</p>
+            <p><strong>Problem:</strong> Free N &gt; 5 ppm &rarr; AlN precipitation &lt; 0.5 &mu;m &rarr; iron loss W/kg degradation. Free N = total N &minus; N(AlN) &minus; N(TiN) — KNIME WF03 calculation. Never at end of long sequence (&gt; 6 heats).</p>
+            <p><strong>SSEG thresholds:</strong> C RH &lt; 20 ppm · Free N &lt; 5 ppm · Cu &lt; 0.045% · Ca/Al 0.10–0.14 · W/kg 50Hz &lt; spec</p>
+            <table class="gantt-mini">
+              <thead><tr><th>AMF step</th><th>Status</th><th>Weeks</th></tr></thead>
+              <tbody>
+                <tr><td>#1 to #8</td><td><span class="gantt-bar gantt-afaire" style="width:60px;"></span> To do (RCA study calibrated on simulated data in the app)</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sseg-fiche" style="border-left-color:#4A4A4A;">
+            <h4>SSEG_PKG_Tinplate — Tinplate MR · Free N + strain aging</h4>
+            <p class="sseg-meta">Tinplate / TFS low C: very thin products (&lt; 0.2 mm) — dominant cofactor: free N not fixed by Al &rarr; strain aging</p>
+            <p><strong>Problem:</strong> Free N not fixed by Al &rarr; mechanical strain aging. Cu + free N interaction: free N amplifies Cu embrittlement. Al/N ratio &gt; 3.5 ensures stoichiometric fixation. Oscillation marks &lt; 0.5 mm critical for thin strip.</p>
+            <p><strong>SSEG thresholds:</strong> Al/N &gt; 3.5 · Free N &lt; 8 ppm · Cu &lt; 0.075% · Ca/Al 0.10–0.14 · Oscillation marks &lt; 0.5 mm</p>
+            <table class="gantt-mini">
+              <thead><tr><th>AMF step</th><th>Status</th><th>Weeks</th></tr></thead>
+              <tbody>
+                <tr><td>#1 to #8</td><td><span class="gantt-bar gantt-afaire" style="width:60px;"></span> To do (RCA study calibrated on simulated data in the app)</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ═══ REGISTRE NUANCES ═══ -->
+        <div id="pilot-registre" class="pilot-subsection">
+          <h3>Grade register</h3>
+          <p>Summary of the 2 type grades with demo data. The remaining grades in the reference (8 remaining) will be added progressively.</p>
+
+          <div style="overflow-x:auto;">
+            <table class="registre-table">
+              <thead>
+                <tr><th>Grade</th><th>Segment</th><th>Cu max</th><th>C max</th><th>N max</th><th>Main risk</th><th>A3</th><th>Signal Y status</th></tr>
+              </thead>
+              <tbody>
+                <tr style="background:rgba(226,102,26,0.08);"><td><strong>NGO high Si (M400-50A)</strong></td><td>NGO Elec.</td><td>0.045%</td><td>20 ppm</td><td>25 ppm</td><td>Residual N + Cu + Si</td><td>A3-1/A3-3</td><td style="color:#e2661a;font-weight:600;">Demo data</td></tr>
+                <tr style="background:rgba(226,102,26,0.08);"><td><strong>Tinplate / TFS (HR3)</strong></td><td>Packaging</td><td>0.075%</td><td>40 ppm</td><td>40 ppm</td><td>Free N strain aging</td><td>A3-1</td><td style="color:#e2661a;font-weight:600;">Demo data</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ═══ MATRICE DÉFAUTS ═══ -->
+        <div id="pilot-defauts" class="pilot-subsection">
+          <h3>Defect matrix — NGO high Si &amp; Packaging Tinplate</h3>
+          <p>Defects, criticality, priority X variables and KNIME workflows for the 2 sub-segments with demo data.</p>
+
+          <div class="defauts-sseg-block">
+            <h4>SSEG_NGO_highSi — 5 defects</h4>
+            <table class="defauts-table">
+              <thead><tr><th>Code</th><th>Defect</th><th>Crit.</th><th>Tier</th><th>Priority X variables</th><th>WF</th></tr></thead>
+              <tbody>
+                <tr><td>B5</td><td>AlN magnetic aging</td><td><span class="crit-dot crit-critique">&#9679;</span></td><td>T1</td><td>N_exit_RH, Al/N, N_free</td><td>WF04</td></tr>
+                <tr><td>B1</td><td>Al&#8322;O&#8323; clogging</td><td><span class="crit-dot crit-critique">&#9679;</span></td><td>T2</td><td>[Al]sol, Ca/Al</td><td>WF03</td></tr>
+                <tr><td>B4</td><td>Coarse TiN</td><td><span class="crit-dot crit-critique">&#9679;</span></td><td>T2</td><td>Ti/N, sequence_position</td><td>WF06</td></tr>
+                <tr><td>A3</td><td>N strain aging</td><td><span class="crit-dot crit-critique">&#9679;</span></td><td>T1</td><td>N_free</td><td>WF04, WF06</td></tr>
+                <tr><td>A1</td><td>BLSR (low)</td><td><span class="crit-dot crit-faible">&#9675;</span></td><td>T2</td><td>Cu &lt; 0.045%</td><td>WF02</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="defauts-sseg-block">
+            <h4>SSEG_PKG_Tinplate — 5 defects</h4>
+            <table class="defauts-table">
+              <thead><tr><th>Code</th><th>Defect</th><th>Crit.</th><th>Tier</th><th>Priority X variables</th><th>WF</th></tr></thead>
+              <tbody>
+                <tr><td>B2</td><td>Coarse exogenous inclusions</td><td><span class="crit-dot crit-critique">&#9679;</span></td><td>T3</td><td>Slag carry-over</td><td>WF03</td></tr>
+                <tr><td>B3</td><td>Elongated MnS</td><td><span class="crit-dot crit-critique">&#9679;</span></td><td>T1</td><td>[Mn]&times;[S], [S]</td><td>WF07</td></tr>
+                <tr><td>A3</td><td>N strain aging</td><td><span class="crit-dot crit-critique">&#9679;</span></td><td>T1</td><td>N_free, Al/N</td><td>WF04, WF06</td></tr>
+                <tr><td>B1</td><td>Clogging</td><td><span class="crit-dot crit-critique">&#9679;</span></td><td>T2</td><td>Ca/Al, [Al]sol</td><td>WF03</td></tr>
+                <tr><td>C6</td><td>Oscillation marks</td><td><span class="crit-dot crit-critique">&#9679;</span></td><td>T3</td><td>Oscillation freq.</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top:1rem; font-size:0.78rem; color:var(--text-soft);">
+            <strong>Criticality legend:</strong>
+            <span class="crit-dot crit-critique">&#9679;</span> Critical (show-stopping defect) &middot;
+            <span class="crit-dot crit-sensible">&#9680;</span> Sensitive (to monitor) &middot;
+            <span class="crit-dot crit-faible">&#9675;</span> Low (monitoring)
+          </div>
+        </div>
+
+        <!-- ═══ CLASSEUR COMPLET ═══ -->
+        <div id="pilot-classeur" class="pilot-subsection">
+          <h3>Complete workbook — 65 tabs</h3>
+          <p>Unified monitoring tool built through consolidation. Hierarchical tab-based navigation.</p>
+          <div class="classeur-placeholder">
+            <div class="classeur-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/><line x1="8" y1="9" x2="10" y2="9"/></svg>
+            </div>
+            <p class="classeur-title">PILOTAGE_COMPLET.xlsx</p>
+            <p class="classeur-desc">65 tabs — management dashboard, segment sheets, sub-segment sheets, grade sheets, monitoring grid, drift scenarios, portfolio Gantt, incident log, KNIME workflows.</p>
+            <div class="classeur-structure">
+              <span class="classeur-tag">INDEX</span>
+              <span class="classeur-tag">4 Segments</span>
+              <span class="classeur-tag">14 Sub-segments</span>
+              <span class="classeur-tag">20 Grades</span>
+              <span class="classeur-tag">Monitoring grid</span>
+              <span class="classeur-tag">Drift scenarios</span>
+              <span class="classeur-tag">Gantt</span>
+              <span class="classeur-tag">Defect matrix</span>
+            </div>
+            <p class="classeur-access">Document available upon request — terms to be discussed during the interview.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="carnet" class="section-alt">
+      <div class="section-inner">
+        <h2>Grade Book</h2>
+        <p class="lead">Replicable analytical pipeline — 4 segments, 14 sub-segments, 20 type grades. Entry point by major families: IF, NGO, AHSS, packaging.</p>
+
+        <div class="carnet-grid">
+          <div class="seg-block">
+            <div class="seg-header seg-if">IF / Extra-low carbon — Deep drawing (EN 10130)</div>
+            <div class="sseg-row">
+              <div class="sseg-label">IF Ti/Nb<span class="cofact">Cu · Mn/S &rarr; BLSR · Free N &lt; 5 ppm · Ti/N &gt; 4.0</span></div>
+              <div class="nuances-list"><span class="nuance nuance-done">DC06 &#10004;</span></div>
+            </div>
+            <div class="sseg-row">
+              <div class="sseg-label">IF Ti<span class="cofact">MnS + TiN · Ti/N &gt; 4.0 · Free N &lt; 5 ppm</span></div>
+              <div class="nuances-list"><span class="nuance nuance-todo">DC05</span></div>
+            </div>
+            <div class="sseg-row">
+              <div class="sseg-label">IF standard<span class="cofact">Mn/S &gt; 10 · [Al]sol 0.025–0.060% · Ca/Al 0.10–0.14</span></div>
+              <div class="nuances-list"><span class="nuance nuance-todo">DC04</span></div>
+            </div>
+            <div class="sseg-row">
+              <div class="sseg-label">IF cold<span class="cofact">C &lt; 20 ppm · Free N &lt; 5 ppm · deep drawing</span></div>
+              <div class="nuances-list"><span class="nuance nuance-todo">DC03</span></div>
+            </div>
+            <div class="sseg-row">
+              <div class="sseg-label">BH IF HR<span class="cofact">Free C 10–25 ppm BH window · N &lt; 35 ppm · Cu Cottrell</span></div>
+              <div class="nuances-list"><span class="nuance nuance-todo">BH220</span></div>
+            </div>
+            <div class="sseg-row">
+              <div class="sseg-label">H220YD IF HR<span class="cofact">P/Cu interaction · P variability EAF · Cu &lt; 0.075%</span></div>
+              <div class="nuances-list"><span class="nuance nuance-todo">H220YD</span></div>
+            </div>
+          </div>
+
+          <div class="seg-block">
+            <div class="seg-header seg-ngo">NGO — Electrical steels (EN 10106)</div>
+            <div class="sseg-row">
+              <div class="sseg-label">NGO high Si<span class="cofact">Cu · Si 2.9–3.3% · C/N ppm · Ti · Al · W/kg losses</span></div>
+              <div class="nuances-list">
+                <span class="nuance nuance-done">M400-50A &#10004;</span>
+                <span class="nuance nuance-todo">M330-35A</span>
+              </div>
+            </div>
+            <div class="sseg-row">
+              <div class="sseg-label">NGO Si mod.<span class="cofact">C &lt; 20 ppm · N &lt; 25 ppm · Cu &lt; 0.05% · [Al]sol narrow window</span></div>
+              <div class="nuances-list">
+                <span class="nuance nuance-todo">NGO Si mod. Save</span>
+                <span class="nuance nuance-todo">NGO Si mod. Torque</span>
+                <span class="nuance nuance-todo">NGO Si mod. Speed</span>
+                <span class="nuance nuance-todo">M600-50</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="seg-block">
+            <div class="seg-header seg-ahss">AHSS — Advanced high strength (EN 10346 / EN 10149)</div>
+            <div class="sseg-row">
+              <div class="sseg-label">HSLA Nb<span class="cofact">Nb(C,N) precipitation · Cu &lt; 0.22% · Dissolved H &lt; 2 ppm</span></div>
+              <div class="nuances-list"><span class="nuance nuance-todo">HSLA 420</span></div>
+            </div>
+            <div class="sseg-row">
+              <div class="sseg-label">PHS 22MnB5<span class="cofact">Residual P · P&times;Cu · Free B &ge; 10 ppm · CC segregation</span></div>
+              <div class="nuances-list"><span class="nuance nuance-todo">PHS 22MnB5 1500</span></div>
+            </div>
+            <div class="sseg-row">
+              <div class="sseg-label">TRIP 780<span class="cofact">Si/Al &rarr; retained austenite &gamma; · Cu&times;Si · peritectic C</span></div>
+              <div class="nuances-list"><span class="nuance nuance-todo">TRIP 780</span></div>
+            </div>
+            <div class="sseg-row">
+              <div class="sseg-label">AHSS 3G<span class="cofact">B · Ti · N · P · Cu · H · cold forming</span></div>
+              <div class="nuances-list"><span class="nuance nuance-todo">AHSS 3G 980</span></div>
+            </div>
+          </div>
+
+          <div class="seg-block">
+            <div class="seg-header seg-emb">Packaging (EN 10202 / EN 10203)</div>
+            <div class="sseg-row">
+              <div class="sseg-label">Tinplate<span class="cofact">Free N &lt; 8 ppm · Al/N &gt; 3.5 · [Al]sol 0.025–0.050% · Ca/Al</span></div>
+              <div class="nuances-list"><span class="nuance nuance-todo">Tinplate MR</span></div>
+            </div>
+            <div class="sseg-row">
+              <div class="sseg-label">DR8 double reduced<span class="cofact">Total O &lt; 15 ppm · Ca/Al 0.11–0.13 · Cu &lt; 0.060% · 0.14 mm strip</span></div>
+              <div class="nuances-list"><span class="nuance nuance-todo">DR8</span></div>
+            </div>
+            <div class="sseg-row">
+              <div class="sseg-label">TFS low C<span class="cofact">Free N · Al/N &gt; 2.0 · Cu &lt; 0.050% · Cr ECCS adhesion</span></div>
+              <div class="nuances-list"><span class="nuance nuance-todo">TFS low C</span></div>
+            </div>
+          </div>
+        </div>
+
+        <details class="result-box" style="margin-top:1.5rem;">
+          <summary><strong>View CTQ details by segment</strong></summary>
+          <div style="margin-top:1rem;">
+            <p>CTQ details, windows and out-of-spec risks are available for each segment: IF, NGO, AHSS and packaging.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="nouvelles-nuances">
+      <div class="section-inner">
+        <h2>New grade development — J1 &rarr; J2 &rarr; J3 Vision</h2>
+        <p class="lead">Reading by market outlet and milestone: what each segment requires, when new grades become possible, and where steelmaking analytical mastery is decisive. J1 (Dec. 2027) proves the method on 20 BOF grades — J2 and J3 extend it to EAF, packaging and DRI.</p>
+
+        <div class="ngo-table-wrapper">
+          <table class="ngo-table">
+            <thead>
+              <tr>
+                <th>Market outlet</th>
+                <th>Current situation</th>
+                <th>Development track</th>
+                <th>Steelmaking constraint</th>
+                <th>Analytical challenge</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-top:3px solid #E2661A;">
+                <td colspan="5" style="background:#5C4600;color:#fff;font-weight:700;text-align:center;padding:0.4rem;font-size:0.85rem;">NGO — Electrical steels (current book + J1 Dec. 2027)</td>
+              </tr>
+              <tr class="ngo-current">
+                <td><strong>EV traction motors</strong></td>
+                <td>NGO Si mod. Save / Torque / Speed in qualification</td>
+                <td>Process robustness improvement</td>
+                <td>Low Cu · ultra-low C/N · inclusion cleanliness</td>
+                <td>Cpk Cu tracking, RH drift, W/kg vs slab chemistry link</td>
+              </tr>
+              <tr>
+                <td><strong>High speed / e-aviation</strong></td>
+                <td>Partial coverage today</td>
+                <td>Ultra-thin NGO in the long term</td>
+                <td>Very low Cu · critical centerline segregation</td>
+                <td>Cu and cleanliness thresholds on thin gauges</td>
+              </tr>
+              <tr>
+                <td><strong>NGO standard industrial</strong></td>
+                <td>Structural tension with scrap increase</td>
+                <td>More Cu-tolerant NGO</td>
+                <td>Cu and Si trade-off</td>
+                <td>Cu &times; Si &rarr; product conformity model</td>
+              </tr>
+              <tr>
+                <td><strong>Low-carbon EV</strong></td>
+                <td>Not covered today</td>
+                <td>Carbon traceability + evolving charge</td>
+                <td>Residual Cu + carbon footprint per heat</td>
+                <td>Production &times; carbon certificate linkage</td>
+              </tr>
+              <tr style="border-top:3px solid #E2661A;">
+                <td colspan="5" style="background:#1a1a1a;color:#fff;font-weight:700;text-align:center;padding:0.4rem;font-size:0.85rem;">AHSS — Advanced High Strength (from J2 — Dec. 2028)</td>
+              </tr>
+              <tr>
+                <td><strong>DP800 / CP800 EAF</strong></td>
+                <td>Not in book — growing auto market</td>
+                <td>EAF route qualification after J2</td>
+                <td>Cu &lt; 0.15% · P &lt; 0.020% · EAF residual N</td>
+                <td>Rm/A80 regression · peritectic zone decision tree</td>
+              </tr>
+              <tr>
+                <td><strong>PHS 22MnB5 EAF route</strong></td>
+                <td>Strategic decision: viable via EAF?</td>
+                <td>Triple P+Cu+N constraint trade-off</td>
+                <td>P &lt; 0.009% · Free B &gt; 10 ppm · Ti/N &gt; 3.42</td>
+                <td>P&times;Cu&times;N decision matrix by route</td>
+              </tr>
+              <tr style="border-top:3px solid #E2661A;">
+                <td colspan="5" style="background:#1a1a1a;color:#fff;font-weight:700;text-align:center;padding:0.4rem;font-size:0.85rem;">PACKAGING — Thin food-grade strip (from J2)</td>
+              </tr>
+              <tr>
+                <td><strong>DR8 / Tinplate EAF route</strong></td>
+                <td>Not EAF-qualified</td>
+                <td>Total O &lt; 12 ppm + Free N &lt; 5 ppm EAF</td>
+                <td>Cu &lt; 0.060% · Ca/Al 0.11–0.13 strict</td>
+                <td>Cpk total O by route · pinhole regression</td>
+              </tr>
+              <tr>
+                <td><strong>Chrome-plated TFS EAF route</strong></td>
+                <td>Not EAF-qualified</td>
+                <td>Cu &lt; 0.030% EAF target</td>
+                <td>Cu &lt; 0.050% · S &lt; 10 ppm · Cr adhesion</td>
+                <td>Cu+N &rarr; Cr adhesion correlation by route</td>
+              </tr>
+              <tr style="border-top:3px solid #E2661A;">
+                <td colspan="5" style="background:#1a1a1a;color:#fff;font-weight:700;text-align:center;padding:0.4rem;font-size:0.85rem;">IF AUTO — DRI Extension (from J3 — Jul. 2029)</td>
+              </tr>
+              <tr>
+                <td><strong>IF DC06/DC05 DRI route</strong></td>
+                <td>Not produced — DRI 2031+</td>
+                <td>Threshold recalibration with DRI Cu &lt; 0.02%</td>
+                <td>Cu relaxation but variable DRI residual C</td>
+                <td>WF05 recalibrated · DRI residual C node</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="outil-analytique" class="section-alt">
+      <div class="section-inner">
+        <h2>Quality monitoring methodology — Streamlit app</h2>
+        <p class="lead">
+          Interactive application presenting the <strong>concrete methodology</strong> for quality monitoring.
+          Three complementary views, illustrated on simulated data
+          (1,820 coils, 2 years). Thresholds are dynamically calculated from the demo data.
+        </p>
+
+        <div class="axes-grid">
+
+          <div class="axe-card">
+            <div class="axe-num" style="background:var(--accent);">1</div>
+            <h3>Reference framework</h3>
+            <div class="axe-section">
+              <span class="axe-label">What</span>
+              <p>Structure the territory: 4 SEG &rarr; 14 SSEG &rarr; 20 grades &rarr; 30 defects. Complete catalog per grade with critical variables, thresholds, dominant mechanisms.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Link to PILOTAGE_COMPLET</span>
+              <p>Each SSEG sheet mirrors the content of the 14 workbook tabs: defects, heat-by-heat KPIs, cofactors, dedicated KNIME workflows.</p>
+            </div>
+          </div>
+
+          <div class="axe-card">
+            <div class="axe-num" style="background:var(--accent);">2</div>
+            <h3>RCA Studies</h3>
+            <div class="axe-section">
+              <span class="axe-label">What</span>
+              <p>Calibrate empirical thresholds on simulated data (long-term, 2 years). Two complete studies: DC06 / BLSR (949 coils, binary Y) and M400-50A / W_kg (871 coils, continuous Y).</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Pipeline</span>
+              <p>Exploration &rarr; Variable selection &rarr; Modeling &rarr; Ishikawa &rarr; Reverse FMEA &rarr; Calibrated thresholds. Thresholds feed continuous monitoring.</p>
+            </div>
+          </div>
+
+          <div class="axe-card">
+            <div class="axe-num" style="background:var(--accent);">3</div>
+            <h3>Continuous monitoring</h3>
+            <div class="axe-section">
+              <span class="axe-label">What</span>
+              <p>Operate daily, heat by heat. Operational dashboard with indicators per grade (5-6 indicators, OK/alert/action thresholds), readable by a shift supervisor in 30 seconds.</p>
+            </div>
+            <div class="axe-section">
+              <span class="axe-label">Content</span>
+              <p>Process Cpk vs EN standard · dynamic empirical thresholds (calculated from demos) · anticipated drifts with grade &rarr; SSEG &rarr; SEG drill-up · escalation scenarios.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="continuation-box">
+          <h3>Articulation with PILOTAGE_COMPLET</h3>
+          <div class="continuation-steps">
+            <div class="cont-step done">
+              <span class="cont-label">PILOTAGE_COMPLET (65 tabs)</span>
+              <p>The detailed deployment plan: 14 SSEG sheets with defects, KPIs, workflows, field scenarios, action phases. This is the operational specification.</p>
+            </div>
+            <div class="cont-arrow">&rarr;</div>
+            <div class="cont-step done">
+              <span class="cont-label">Streamlit App (methodology)</span>
+              <p>The interactive methodology: structured reference framework, RCA studies on simulated data, operational dashboard with dynamic thresholds. This is the proof of feasibility.</p>
+            </div>
+            <div class="cont-arrow">&rarr;</div>
+            <div class="cont-step next">
+              <span class="cont-label">Operational deployment</span>
+              <p>Feed with MES/OES production data. KNIME/Python workflows calculate heat-by-heat Cpk, thresholds recalibrate with each new RCA study. The tool adapts to the site stack (BO, Power BI, KNIME Server).</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:1.5rem;">
+          <a href="https://sb-process-am-restitution.hf.space" target="_blank" class="dossier-banner" style="display:inline-flex;max-width:520px;">
+            <div class="dossier-banner-left">
+              <span class="dossier-icon">⬡</span>
+              <div>
+                <p class="dossier-title">Access the interactive methodology</p>
+                <p class="dossier-sub">Streamlit App — 3 views · 20 grades · dynamic thresholds · operational dashboard</p>
+              </div>
+            </div>
+            <span class="dossier-cta">Open &rarr;</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="competences">
+      <div class="section-inner">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Project methodology</h3>
+            <ul>
+              <li>A3 / AMF</li>
+              <li>DMAIC / Six Sigma</li>
+              <li>Reverse FMEA</li>
+              <li>Ishikawa</li>
+              <li>Measle Chart</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Analytical tools</h3>
+            <ul>
+              <li>KNIME</li>
+              <li>Orange 3</li>
+              <li>Statistical tests</li>
+              <li>Python</li>
+              <li>Streamlit</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Steelmaking domain</h3>
+            <ul>
+              <li>BOF / LF / RH / Continuous casting</li>
+              <li>Secondary metallurgy and inclusion control</li>
+              <li>IF, NGO, AHSS, packaging grades</li>
+              <li>Decarbonization and metallic charge constraints</li>
+              <li>Value chain analysis and economic objectification</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Cross-functional</h3>
+            <ul>
+              <li>Project management</li>
+              <li>Field / data / decision interface</li>
+              <li>Professional English</li>
+              <li>Autonomy in constrained environments</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-inner contact-inner">
+        <h2>Contact</h2>
+        <div class="contact-cards">
+          <a href="mailto:sergebuasa@gmail.com" class="contact-card"><span>sergebuasa@gmail.com</span></a>
+          <a href="tel:+33628506924" class="contact-card"><span>06 28 50 69 24</span></a>
+        </div>
+        <p class="contact-note">Complete analytical dossier available upon request.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Serge Buasa — Case Study: Steelworks quality control — Integrated BOF steelworks</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    const mainNav = document.querySelector('nav');
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a');
+
+    // Pilot sub-nav: sticky shadow + active pill highlight
+    const pilotNav = document.querySelector('.pilot-nav');
+    const pilotLinks = pilotNav ? pilotNav.querySelectorAll('a') : [];
+    const pilotSubs = document.querySelectorAll('.pilot-subsection');
+
+    // Sync --nav-h CSS variable with actual nav height
+    function syncNavHeight() {
+      const h = mainNav.offsetHeight;
+      document.documentElement.style.setProperty('--nav-h', h + 'px');
+    }
+    syncNavHeight();
+    window.addEventListener('resize', syncNavHeight);
+
+    window.addEventListener('scroll', () => {
+      const navH = mainNav.offsetHeight;
+
+      // Main nav active state
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - navH - 10) current = s.getAttribute('id');
+      });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+
+      // Pilot nav: stuck shadow
+      if (pilotNav) {
+        const rect = pilotNav.getBoundingClientRect();
+        pilotNav.classList.toggle('stuck', rect.top <= navH + 1);
+      }
+
+      // Pilot nav: active pill
+      if (pilotSubs.length) {
+        const offset = navH + (pilotNav ? pilotNav.offsetHeight : 0) + 20;
+        let activeSub = '';
+        pilotSubs.forEach(s => {
+          if (window.scrollY >= s.offsetTop - offset) activeSub = s.getAttribute('id');
+        });
+        pilotLinks.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + activeSub);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

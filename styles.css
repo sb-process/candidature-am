@@ -101,6 +101,32 @@ header h1 {
 
 .btn-download:hover { background: var(--accent-dark); }
 
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.lang-active {
+  padding: 0.3rem 0.6rem;
+  background: var(--white);
+  color: var(--blue);
+}
+.lang-link {
+  padding: 0.3rem 0.6rem;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.2s, background 0.2s;
+}
+.lang-link:hover {
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+}
+
 /* ============================================================
    NAVIGATION
    ============================================================ */
@@ -973,13 +999,31 @@ footer {
 
 .pilot-nav {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   gap: 0.5rem;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
+  position: sticky;
+  top: var(--nav-h, 50px);
+  z-index: 90;
+  background: var(--white);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  scrollbar-width: none;
+}
+.pilot-nav::-webkit-scrollbar { display: none; }
+
+.pilot-nav.stuck {
+  border-bottom-color: var(--gray-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .pilot-nav a {
   display: inline-block;
+  flex-shrink: 0;
+  white-space: nowrap;
   font-size: 0.78rem;
   font-weight: 600;
   padding: 0.4rem 0.85rem;
@@ -989,7 +1033,8 @@ footer {
   transition: all 0.2s;
 }
 
-.pilot-nav a:hover {
+.pilot-nav a:hover,
+.pilot-nav a.active {
   background: var(--accent);
   color: var(--white);
   border-color: var(--accent);
@@ -999,6 +1044,7 @@ footer {
   margin-top: 2.5rem;
   padding-top: 2rem;
   border-top: 2px solid var(--gray-border);
+  scroll-margin-top: calc(var(--nav-h, 50px) + 60px);
 }
 
 .pilot-subsection h3 {
@@ -1059,6 +1105,53 @@ footer {
 .status-phase0 { background: #fff3e0; color: #e65100; }
 .status-encours { background: #e3f2fd; color: #1565c0; }
 .status-fait { background: #e8f5e9; color: #2e7d32; }
+
+/* Classeur placeholder */
+.classeur-placeholder {
+  margin-top: 1rem;
+  padding: 2.5rem 2rem;
+  border: 2px dashed var(--gray-border);
+  border-radius: var(--radius);
+  background: var(--gray-bg);
+  text-align: center;
+}
+.classeur-icon { color: var(--blue); margin-bottom: 1rem; opacity: 0.6; }
+.classeur-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+.classeur-desc {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  max-width: 600px;
+  margin: 0 auto 1.2rem;
+  line-height: 1.5;
+}
+.classeur-structure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+.classeur-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid var(--gray-border);
+  color: var(--text-soft);
+}
+.classeur-access {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue);
+  font-style: italic;
+  margin: 0;
+}
 
 /* Grille pilotage table */
 .grille-table {
