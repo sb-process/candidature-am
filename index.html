@@ -402,19 +402,291 @@
     <section id="pilotage">
       <div class="section-inner">
         <h2>Pilotage support process métal liquide</h2>
-        <p class="lead">Comment je déploie concrètement — 63 onglets du dashboard direction aux fiches nuances individuelles. 4 niveaux hiérarchiques, 4 A3, 14 sous-segments, 20 nuances, Gantt 61 semaines, grille de pilotage, workflows KNIME.</p>
-        <p style="font-size:0.85rem; color:var(--text-soft); margin-top:0.5rem;">Navigation par onglets en bas du classeur. Document en consultation uniquement.</p>
-        <div style="margin-top:1.5rem; position:relative; border:1px solid var(--gray-border); border-radius:var(--radius); overflow:hidden;">
-          <button id="btn-fullscreen" onclick="document.getElementById('pilotage-frame').requestFullscreen()" style="position:absolute; top:8px; right:8px; z-index:10; background:var(--blue); color:var(--white); border:none; border-radius:4px; padding:6px 14px; font-size:0.8rem; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:6px; opacity:0.85; transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-            Plein écran
-          </button>
-          <iframe id="pilotage-frame"
-            width="100%" height="600" frameborder="0" scrolling="yes"
-            sandbox="allow-scripts allow-same-origin"
-            src="https://synpase2026-my.sharepoint.com/personal/sergebuasa_synpase2026_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc={bb20c971-be06-45a2-abdd-e067dabb7f3f}&action=embedview&ActiveCell='INDEX'!A1&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=False&wdAllowInteractivity=False&wdPrint=False"
-          ></iframe>
+        <p class="lead">Déploiement concret — 54 onglets du dashboard direction aux fiches nuances individuelles. 4 niveaux hiérarchiques, 4 A3, 14 sous-segments, 20 nuances types, grille de pilotage, workflows KNIME.</p>
+
+        <div class="pilot-nav">
+          <a href="#pilot-dashboard">Dashboard</a>
+          <a href="#pilot-grille">Grille de pilotage</a>
+          <a href="#pilot-segments">Fiches Segment</a>
+          <a href="#pilot-sseg">Fiches Sous-Segment</a>
+          <a href="#pilot-registre">Registre nuances</a>
+          <a href="#pilot-defauts">Matrice défauts</a>
+          <a href="#pilot-classeur">Classeur complet</a>
         </div>
+
+        <!-- ═══ DASHBOARD ═══ -->
+        <div id="pilot-dashboard" class="pilot-subsection" style="border-top:none; padding-top:0; margin-top:1.5rem;">
+          <h3>Dashboard direction</h3>
+          <p>Vue synthétique : 4 projets A3 transverses et 4 segments produit.</p>
+
+          <h4 style="font-size:0.82rem; font-weight:700; color:var(--accent-dark); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.6rem;">4 axes A3 transverses</h4>
+          <div class="dash-grid">
+            <div class="dash-tile">
+              <h4>A3-1</h4>
+              <p>Cu / Éléments Tramp</p>
+              <p style="font-size:0.72rem;">IF, NGO, AHSS, Emb.</p>
+              <span class="dash-status status-phase0">Phase 0</span>
+            </div>
+            <div class="dash-tile">
+              <h4>A3-2</h4>
+              <p>Maîtrise Inclusionnaire</p>
+              <p style="font-size:0.72rem;">LF, RH, Coulée continue</p>
+              <span class="dash-status status-phase0">Phase 0</span>
+            </div>
+            <div class="dash-tile">
+              <h4>A3-3</h4>
+              <p>Dégazage RH C/N/H</p>
+              <p style="font-size:0.72rem;">IF, NGO, BH, TRIP, Emb.</p>
+              <span class="dash-status status-phase0">Phase 0</span>
+            </div>
+            <div class="dash-tile">
+              <h4>A3-4</h4>
+              <p>Thermique de Séquence</p>
+              <p style="font-size:0.72rem;">Transverse tous segments</p>
+              <span class="dash-status status-phase0">Phase 0</span>
+            </div>
+          </div>
+
+          <h4 style="font-size:0.82rem; font-weight:700; color:var(--accent-dark); text-transform:uppercase; letter-spacing:0.06em; margin:1.2rem 0 0.6rem;">4 segments produit</h4>
+          <div class="dash-grid">
+            <div class="dash-tile" style="border-top-color:#E2661A;">
+              <h4>IF</h4>
+              <p>Emboutissage auto</p>
+              <p style="font-size:0.72rem;">6 SSEG · DC06, DC05, DC04, DC03, BH220, H220YD</p>
+            </div>
+            <div class="dash-tile" style="border-top-color:#C04E0E;">
+              <h4>NGO</h4>
+              <p>Aciers électriques</p>
+              <p style="font-size:0.72rem;">2 SSEG · M400-50A, iCARe®, M600-50</p>
+            </div>
+            <div class="dash-tile" style="border-top-color:#1A1A1A;">
+              <h4>AHSS</h4>
+              <p>Haute résistance</p>
+              <p style="font-size:0.72rem;">4 SSEG · HSLA 420, Usibor®, TRIP780, Fortiform®</p>
+            </div>
+            <div class="dash-tile" style="border-top-color:#4A4A4A;">
+              <h4>Emballage</h4>
+              <p>Tinplate / TFS</p>
+              <p style="font-size:0.72rem;">3 SSEG · Tinplate MR, DR8, TFS bas C</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ GRILLE DE PILOTAGE ═══ -->
+        <div id="pilot-grille" class="pilot-subsection">
+          <h3>Grille de pilotage — 4 niveaux</h3>
+          <p>Indicateurs pilotés par niveau hiérarchique, du transverse métallurgie secondaire aux fiches SSEG.</p>
+
+          <div style="overflow-x:auto;">
+            <table class="grille-table">
+              <thead>
+                <tr><th>Indicateur</th><th>Seuil</th><th>Fréquence</th><th>Source</th><th>A3</th></tr>
+              </thead>
+              <tbody>
+                <tr class="grille-niveau"><td colspan="5">NIVEAU 1a — TRANSVERSE LF / RH / CC</td></tr>
+                <tr><td>Ca/Al ratio</td><td>&gt; 1,5</td><td>Coulée/coulée</td><td>Labo LF</td><td>A3-2</td></tr>
+                <tr><td>Basicité laitier LF</td><td>&gt; 2,5</td><td>Coulée/coulée</td><td>Labo LF</td><td>A3-2</td></tr>
+                <tr><td>O total LECO (ppm)</td><td>&lt; 20 ppm</td><td>Sur demande</td><td>Labo</td><td>A3-2</td></tr>
+                <tr><td>C sortie RH (ppm)</td><td>Selon nuance</td><td>C/C</td><td>OES RH / MES</td><td>A3-3</td></tr>
+                <tr><td>N sortie RH (ppm)</td><td>Selon nuance</td><td>C/C</td><td>OES RH / MES</td><td>A3-3</td></tr>
+                <tr><td>T° poche départ (°C)</td><td>Selon nuance</td><td>C/C</td><td>Pyrométrie MES</td><td>A3-4</td></tr>
+                <tr><td>Surchauffe (°C)</td><td>Selon nuance</td><td>C/C</td><td>MES</td><td>A3-4</td></tr>
+                <tr><td>Bouchages busette</td><td>0/séquence</td><td>Événementiel</td><td>MES incidents</td><td>A3-2</td></tr>
+                <tr><td>Durée vide RH (min)</td><td>≥ seuil nuance</td><td>C/C</td><td>MES RH</td><td>A3-3</td></tr>
+
+                <tr class="grille-niveau"><td colspan="5">NIVEAU 1b — TRANSVERSE DÉCARBONATION</td></tr>
+                <tr><td>Cu estimé catég. ferrailles</td><td>Selon catégorie</td><td>Réception</td><td>Achats</td><td>A3-1</td></tr>
+                <tr><td>Taux ferrailles BOF / C</td><td>Selon nuance</td><td>C/C</td><td>MES BOF</td><td>A3-1</td></tr>
+                <tr><td>Évolution Cu vs % ferrailles</td><td>Dérive &gt; X ppm</td><td>Calculé</td><td>WF02</td><td>A3-1</td></tr>
+                <tr><td>Sn résiduel (%)</td><td>&lt; 0,020%</td><td>C/C</td><td>OES aciérie</td><td>A3-1</td></tr>
+                <tr><td>Ni résiduel (%)</td><td>&lt; 0,100%</td><td>C/C</td><td>OES aciérie</td><td>A3-1</td></tr>
+
+                <tr class="grille-niveau"><td colspan="5">NIVEAU 2 — SEGMENT NGO</td></tr>
+                <tr><td>C sortie RH (ppm)</td><td>haut Si &lt; 20 · iCARe &lt; 20 · M600 &lt; 25</td><td>C/C</td><td>OES RH</td><td>A3-3</td></tr>
+                <tr><td>N sortie RH (ppm)</td><td>haut Si &lt; 25 · iCARe &lt; 25 · M600 &lt; 30</td><td>C/C</td><td>OES RH</td><td>A3-3</td></tr>
+                <tr><td>Cu poche (%)</td><td>haut Si &lt; 0,045 · iCARe &lt; 0,055</td><td>C/C</td><td>OES</td><td>A3-1</td></tr>
+                <tr><td>Si (%)</td><td>haut Si 2,90–3,30 · iCARe 0,50–1,50</td><td>C/C</td><td>OES</td><td>—</td></tr>
+
+                <tr class="grille-niveau"><td colspan="5">NIVEAU 2 — SEGMENT EMBALLAGE</td></tr>
+                <tr><td>Cu poche (%)</td><td>&lt; 0,075</td><td>C/C</td><td>OES</td><td>A3-1</td></tr>
+                <tr><td>N total (ppm)</td><td>&lt; 40</td><td>C/C</td><td>OES</td><td>A3-3</td></tr>
+                <tr><td>N libre (ppm)</td><td>&lt; 8</td><td>C/C</td><td>Calculé</td><td>A3-3</td></tr>
+                <tr><td>Al/N ratio</td><td>&gt; 3,5</td><td>C/C</td><td>Calculé</td><td>A3-3</td></tr>
+                <tr><td>C (ppm)</td><td>&lt; 40</td><td>C/C</td><td>OES</td><td>A3-3</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ═══ FICHES SEGMENT ═══ -->
+        <div id="pilot-segments" class="pilot-subsection">
+          <h3>Fiches Segment — NGO &amp; Emballage</h3>
+          <p>Seuils, cofacteurs et défauts pour les 2 segments avec données démo.</p>
+
+          <div class="seg-fiche">
+            <div class="seg-fiche-header seg-ngo">NGO — Aciers Électriques EV / iCARe® (EN 10106)</div>
+            <div class="seg-fiche-body">
+              <h4>Seuils clés</h4>
+              <table class="grille-table">
+                <thead><tr><th>Indicateur</th><th>NGO haut Si</th><th>NGO iCARe</th><th>M600-50</th></tr></thead>
+                <tbody>
+                  <tr><td>C sortie RH (ppm)</td><td>&lt; 20</td><td>&lt; 20</td><td>&lt; 25</td></tr>
+                  <tr><td>N sortie RH (ppm)</td><td>&lt; 25</td><td>&lt; 25</td><td>&lt; 30</td></tr>
+                  <tr><td>Cu poche (%)</td><td>&lt; 0,045</td><td>&lt; 0,055</td><td>&lt; 0,055</td></tr>
+                  <tr><td>Si (%)</td><td>2,90–3,30</td><td>0,50–1,50</td><td>0,50–1,50</td></tr>
+                  <tr><td>N libre (ppm)</td><td>&lt; 5</td><td>&lt; 5</td><td>&lt; 8</td></tr>
+                </tbody>
+              </table>
+              <h4>Cofacteurs</h4>
+              <ul style="list-style:disc; margin-left:1.2rem; font-size:0.84rem; color:var(--text-soft);">
+                <li><strong>N résiduel + AlN</strong> — N libre &gt; 5 ppm → précipitation AlN &lt; 0,5 µm → dégradation W/kg (WF03)</li>
+                <li><strong>Cu + haut Si</strong> — synergie Cu + Si élevé sur fragilisation (WF02)</li>
+                <li><strong>Vide RH insuffisant</strong> — durée vide &lt; seuil → C/N hors spec (WF03)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="seg-fiche">
+            <div class="seg-fiche-header seg-emb">Emballage — Tinplate / TFS bas C (EN 10202 / EN 10203)</div>
+            <div class="seg-fiche-body">
+              <h4>Seuils clés</h4>
+              <table class="grille-table">
+                <thead><tr><th>Indicateur</th><th>Tinplate</th><th>TFS bas C</th></tr></thead>
+                <tbody>
+                  <tr><td>Cu poche (%)</td><td>&lt; 0,075</td><td>&lt; 0,075</td></tr>
+                  <tr><td>N total (ppm)</td><td>&lt; 40</td><td>&lt; 40</td></tr>
+                  <tr><td>N libre (ppm)</td><td>&lt; 8</td><td>&lt; 8</td></tr>
+                  <tr><td>Al/N ratio</td><td>&gt; 3,5</td><td>&gt; 3,5</td></tr>
+                  <tr><td>C (ppm)</td><td>&lt; 40</td><td>&lt; 40</td></tr>
+                  <tr><td>Ca/Al ratio</td><td>0,10–0,14</td><td>0,10–0,14</td></tr>
+                </tbody>
+              </table>
+              <h4>Cofacteurs</h4>
+              <ul style="list-style:disc; margin-left:1.2rem; font-size:0.84rem; color:var(--text-soft);">
+                <li><strong>N libre → vieillissement</strong> — N non fixé par Al → fragilisation au stockage (WF01)</li>
+                <li><strong>Cu + N libre synergique</strong> — N libre amplifie la fragilisation Cu (WF01/WF02)</li>
+                <li><strong>Cu limite stricte</strong> — contact alimentaire → Cu &lt; 0,075% impératif (WF02)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ FICHES SOUS-SEGMENT ═══ -->
+        <div id="pilot-sseg" class="pilot-subsection">
+          <h3>Fiches Sous-Segment — NGO haut Si &amp; Emballage Tinplate</h3>
+          <p>Problème spécifique, seuils SSEG et démarche A3 pour les 2 sous-segments avec données démo.</p>
+
+          <div class="sseg-fiche" style="border-left-color:#C04E0E;">
+            <h4>SSEG_NGO_hautSi — M400-50A · N résiduel + AlN → W/kg</h4>
+            <p class="sseg-meta">NGO haut Si (Si 2,90–3,30%) pour moteurs EV — cofacteur dominant : N résiduel + précipitation AlN</p>
+            <p><strong>Problème :</strong> N libre &gt; 5 ppm → précipitation AlN &lt; 0,5 µm → dégradation pertes fer W/kg. N libre = N total − N(AlN) − N(TiN) — calcul KNIME WF03. Jamais en fin de séquence longue (&gt; 6 coulées).</p>
+            <p><strong>Seuils SSEG :</strong> C RH &lt; 20 ppm · N libre &lt; 5 ppm · Cu &lt; 0,045% · Ca/Al 0,10–0,14 · W/kg 50Hz &lt; spec</p>
+            <table class="gantt-mini">
+              <thead><tr><th>Étape AMF</th><th>Statut</th><th>Semaines</th></tr></thead>
+              <tbody>
+                <tr><td>#1 à #8</td><td><span class="gantt-bar gantt-afaire" style="width:60px;"></span> À faire (étude RCA calibrée sur données simulées dans l'app)</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sseg-fiche" style="border-left-color:#4A4A4A;">
+            <h4>SSEG_EMB_Tinplate — Tinplate MR · N libre + vieillissement</h4>
+            <p class="sseg-meta">Tinplate / TFS bas C : produits très minces (&lt; 0,2 mm) — cofacteur dominant : N libre non fixé par Al → vieillissement</p>
+            <p><strong>Problème :</strong> N libre non fixé par Al → vieillissement mécanique. Interaction Cu + N libre : N libre amplifie la fragilisation Cu. Al/N ratio &gt; 3,5 garantit fixation stœchiométrique. Oscillation marks &lt; 0,5 mm critique pour tôle fine.</p>
+            <p><strong>Seuils SSEG :</strong> Al/N &gt; 3,5 · N libre &lt; 8 ppm · Cu &lt; 0,075% · Ca/Al 0,10–0,14 · Oscillation marks &lt; 0,5 mm</p>
+            <table class="gantt-mini">
+              <thead><tr><th>Étape AMF</th><th>Statut</th><th>Semaines</th></tr></thead>
+              <tbody>
+                <tr><td>#1 à #8</td><td><span class="gantt-bar gantt-afaire" style="width:60px;"></span> À faire (étude RCA calibrée sur données simulées dans l'app)</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ═══ REGISTRE NUANCES ═══ -->
+        <div id="pilot-registre" class="pilot-subsection">
+          <h3>Registre nuances</h3>
+          <p>Synthèse des 10 nuances types couvertes : seuils Cu, risque principal, A3 prioritaire, statut du signal Y.</p>
+
+          <div style="overflow-x:auto;">
+            <table class="registre-table">
+              <thead>
+                <tr><th>Nuance</th><th>Segment</th><th>Cu max</th><th>C max</th><th>N max</th><th>Risque principal</th><th>A3</th><th>Statut signal Y</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>DC06 / IF TiNb</strong></td><td>IF Auto</td><td>0,045%</td><td>30 ppm</td><td>35 ppm</td><td>Cu+MnS → BLSR</td><td>A3-1/A3-3</td><td style="color:#2e7d32;font-weight:600;">Identifié</td></tr>
+                <tr><td>DC05 / IF Ti</td><td>IF Auto</td><td>0,055%</td><td>35 ppm</td><td>40 ppm</td><td>Cu+TiN → BLSR</td><td>A3-1/A3-3</td><td style="color:#f57c00;">À fiabiliser</td></tr>
+                <tr><td>DC04 / IF std</td><td>IF Auto</td><td>0,075%</td><td>40 ppm</td><td>40 ppm</td><td>Cu limite</td><td>A3-1</td><td style="color:#f57c00;">À fiabiliser</td></tr>
+                <tr><td><strong>NGO haut Si</strong></td><td>NGO Élec.</td><td>0,045%</td><td>20 ppm</td><td>25 ppm</td><td>N résiduel + Cu + Si</td><td>A3-1/A3-3</td><td style="color:#9e9e9e;">Non démarré</td></tr>
+                <tr><td>NGO iCARe® Save</td><td>NGO Élec.</td><td>0,055%</td><td>20 ppm</td><td>25 ppm</td><td>C résiduel vide RH</td><td>A3-3</td><td style="color:#9e9e9e;">Non démarré</td></tr>
+                <tr><td>M600-50</td><td>NGO Élec.</td><td>0,055%</td><td>25 ppm</td><td>30 ppm</td><td>C/N standard</td><td>A3-3</td><td style="color:#9e9e9e;">Non démarré</td></tr>
+                <tr><td>HSLA 420</td><td>AHSS HR</td><td>0,220%</td><td>—</td><td>—</td><td>Nb micro-alliage</td><td>A3-1</td><td style="color:#9e9e9e;">Non démarré</td></tr>
+                <tr><td>Usibor® / Fortiform®</td><td>AHSS HR</td><td>0,130%</td><td>—</td><td>—</td><td>Cu+P → fragilisation</td><td>A3-1</td><td style="color:#757575;">Client only</td></tr>
+                <tr><td><strong>Tinplate / TFS</strong></td><td>Emballage</td><td>0,075%</td><td>40 ppm</td><td>40 ppm</td><td>N libre vieillissement</td><td>A3-1</td><td style="color:#9e9e9e;">Non démarré</td></tr>
+                <tr><td>TRIP 780</td><td>AHSS HR</td><td>0,150%</td><td>—</td><td>—</td><td>Cu×Si · C péritectique</td><td>A3-1/A3-4</td><td style="color:#9e9e9e;">Non démarré</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ═══ MATRICE DÉFAUTS ═══ -->
+        <div id="pilot-defauts" class="pilot-subsection">
+          <h3>Matrice défauts — NGO haut Si &amp; Emballage Tinplate</h3>
+          <p>Défauts, criticité, variables prioritaires X et workflows KNIME pour les 2 sous-segments avec données démo.</p>
+
+          <div class="defauts-sseg-block">
+            <h4>SSEG_NGO_hautSi — 5 défauts</h4>
+            <table class="defauts-table">
+              <thead><tr><th>Code</th><th>Défaut</th><th>Crit.</th><th>Tier</th><th>X prioritaires</th><th>WF</th></tr></thead>
+              <tbody>
+                <tr><td>B5</td><td>AlN vieill. magnétique</td><td><span class="crit-dot crit-critique">●</span></td><td>T1</td><td>N_sortie_RH, Al/N, N_libre</td><td>WF04</td></tr>
+                <tr><td>B1</td><td>Clogging Al₂O₃</td><td><span class="crit-dot crit-critique">●</span></td><td>T2</td><td>[Al]sol, Ca/Al</td><td>WF03</td></tr>
+                <tr><td>B4</td><td>TiN grossiers</td><td><span class="crit-dot crit-critique">●</span></td><td>T2</td><td>Ti/N, position_séquence</td><td>WF06</td></tr>
+                <tr><td>A3</td><td>Vieillissement N</td><td><span class="crit-dot crit-critique">●</span></td><td>T1</td><td>N_libre</td><td>WF04, WF06</td></tr>
+                <tr><td>A1</td><td>BLSR (faible)</td><td><span class="crit-dot crit-faible">○</span></td><td>T2</td><td>Cu &lt; 0,045%</td><td>WF02</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="defauts-sseg-block">
+            <h4>SSEG_EMB_Tinplate — 5 défauts</h4>
+            <table class="defauts-table">
+              <thead><tr><th>Code</th><th>Défaut</th><th>Crit.</th><th>Tier</th><th>X prioritaires</th><th>WF</th></tr></thead>
+              <tbody>
+                <tr><td>B2</td><td>Exogènes grossières</td><td><span class="crit-dot crit-critique">●</span></td><td>T3</td><td>Slag carry-over</td><td>WF03</td></tr>
+                <tr><td>B3</td><td>MnS allongées</td><td><span class="crit-dot crit-critique">●</span></td><td>T1</td><td>[Mn]×[S], [S]</td><td>WF07</td></tr>
+                <tr><td>A3</td><td>Vieillissement N</td><td><span class="crit-dot crit-critique">●</span></td><td>T1</td><td>N_libre, Al/N</td><td>WF04, WF06</td></tr>
+                <tr><td>B1</td><td>Clogging</td><td><span class="crit-dot crit-critique">●</span></td><td>T2</td><td>Ca/Al, [Al]sol</td><td>WF03</td></tr>
+                <tr><td>C6</td><td>Oscillation marks</td><td><span class="crit-dot crit-critique">●</span></td><td>T3</td><td>Fréq. oscillation</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top:1rem; font-size:0.78rem; color:var(--text-soft);">
+            <strong>Légende criticité :</strong>
+            <span class="crit-dot crit-critique">●</span> Critique (défaut rédhibitoire) ·
+            <span class="crit-dot crit-sensible">◐</span> Sensible (à surveiller) ·
+            <span class="crit-dot crit-faible">○</span> Faible (monitoring)
+          </div>
+        </div>
+
+        <!-- ═══ CLASSEUR COMPLET ═══ -->
+        <div id="pilot-classeur" class="pilot-subsection">
+          <h3>Classeur complet — 54 onglets</h3>
+          <p>Navigation par onglets en bas du classeur. Document en consultation uniquement.</p>
+          <div style="margin-top:1rem; position:relative; border:1px solid var(--gray-border); border-radius:var(--radius); overflow:hidden;">
+            <button id="btn-fullscreen" onclick="document.getElementById('pilotage-frame').requestFullscreen()" style="position:absolute; top:8px; right:8px; z-index:10; background:var(--blue); color:var(--white); border:none; border-radius:4px; padding:6px 14px; font-size:0.8rem; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:6px; opacity:0.85; transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+              Plein écran
+            </button>
+            <iframe id="pilotage-frame"
+              width="100%" height="600" frameborder="0" scrolling="yes"
+              sandbox="allow-scripts allow-same-origin"
+              src="https://synpase2026-my.sharepoint.com/personal/sergebuasa_synpase2026_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc={bb20c971-be06-45a2-abdd-e067dabb7f3f}&action=embedview&ActiveCell='INDEX'!A1&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=False&wdAllowInteractivity=False&wdPrint=False"
+            ></iframe>
+          </div>
+        </div>
+
       </div>
     </section>
 

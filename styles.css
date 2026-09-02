@@ -968,6 +968,306 @@ footer {
 }
 
 /* ============================================================
+   PILOTAGE — DASHBOARD & GRILLES
+   ============================================================ */
+
+.pilot-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.pilot-nav a {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 20px;
+  border: 1px solid var(--gray-border);
+  color: var(--text-soft);
+  transition: all 0.2s;
+}
+
+.pilot-nav a:hover {
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
+}
+
+.pilot-subsection {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--gray-border);
+}
+
+.pilot-subsection h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 0.6rem;
+}
+
+.pilot-subsection > p {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin-bottom: 1.2rem;
+}
+
+/* Dashboard tiles */
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  margin: 1.2rem 0;
+}
+
+.dash-tile {
+  background: var(--white);
+  border: 1px solid var(--gray-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--accent);
+}
+
+.dash-tile h4 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 0.3rem;
+}
+
+.dash-tile p {
+  font-size: 0.76rem;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
+
+.dash-tile .dash-status {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin-top: 0.4rem;
+}
+
+.status-phase0 { background: #fff3e0; color: #e65100; }
+.status-encours { background: #e3f2fd; color: #1565c0; }
+.status-fait { background: #e8f5e9; color: #2e7d32; }
+
+/* Grille pilotage table */
+.grille-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.grille-table thead tr {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.grille-table th {
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.grille-table td {
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid var(--gray-border);
+  vertical-align: top;
+}
+
+.grille-table tbody tr:nth-child(even) { background: var(--gray-bg); }
+
+.grille-niveau {
+  background: var(--blue) !important;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.grille-niveau td { border-bottom: none; color: var(--white); }
+
+/* Segment fiche cards */
+.seg-fiche {
+  background: var(--white);
+  border: 1px solid var(--gray-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+
+.seg-fiche-header {
+  padding: 0.7rem 1.2rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seg-fiche-body {
+  padding: 1rem 1.2rem;
+}
+
+.seg-fiche-body h4 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0.8rem 0 0.4rem;
+}
+
+.seg-fiche-body h4:first-child { margin-top: 0; }
+
+/* SSEG fiche */
+.sseg-fiche {
+  background: var(--white);
+  border: 1px solid var(--gray-border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.sseg-fiche h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 0.4rem;
+}
+
+.sseg-fiche .sseg-meta {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  font-style: italic;
+  margin-bottom: 0.8rem;
+}
+
+.sseg-fiche p {
+  font-size: 0.86rem;
+  color: var(--text-soft);
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+/* Gantt mini */
+.gantt-mini {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.72rem;
+  margin-top: 0.6rem;
+}
+
+.gantt-mini th {
+  padding: 0.3rem 0.5rem;
+  background: var(--gray-bg);
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.gantt-mini td {
+  padding: 0.25rem 0.5rem;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.gantt-mini .gantt-bar {
+  display: inline-block;
+  height: 6px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.gantt-encours { background: var(--accent); }
+.gantt-afaire { background: var(--gray-border); }
+
+/* Registre nuances */
+.registre-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.registre-table thead tr { background: var(--blue); color: var(--white); }
+
+.registre-table th {
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.registre-table td {
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid var(--gray-border);
+  vertical-align: top;
+}
+
+.registre-table tbody tr:nth-child(even) { background: var(--gray-bg); }
+
+/* Defauts matrix */
+.defauts-sseg-block {
+  margin-bottom: 1rem;
+}
+
+.defauts-sseg-block h4 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--blue);
+  padding: 0.4rem 0.6rem;
+  background: var(--gray-bg);
+  border-left: 3px solid var(--accent);
+  margin-bottom: 0;
+}
+
+.defauts-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.defauts-table th {
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  background: var(--gray-bg);
+  border-bottom: 2px solid var(--gray-border);
+}
+
+.defauts-table td {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid var(--gray-border);
+  vertical-align: top;
+}
+
+.crit-dot { font-size: 0.9rem; }
+.crit-critique { color: #d32f2f; }
+.crit-sensible { color: #f57c00; }
+.crit-faible { color: #9e9e9e; }
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 
@@ -989,6 +1289,17 @@ footer {
 
   .pipeline-step { flex-direction: column; gap: 0.8rem; }
   .step-number { width: 1.8rem; height: 1.8rem; font-size: 0.85rem; }
+
+  .dash-grid { grid-template-columns: 1fr 1fr; }
+
+  .grille-table,
+  .registre-table,
+  .defauts-table { font-size: 0.7rem; }
+
+  .grille-table th,
+  .grille-table td,
+  .registre-table th,
+  .registre-table td { padding: 0.3rem 0.4rem; }
 }
 
 /* ── Banner outil analytique ── */
